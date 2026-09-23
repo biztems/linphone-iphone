@@ -1,3 +1,12 @@
+> **biztems fork.** This repository is biztems' fork of
+> [Linphone for iOS](https://github.com/BelledonneCommunications/linphone-iphone)
+> by Belledonne Communications, under the GNU GPL version 3. The `biztems`
+> branch starts from Linphone 6.2.3; biztems' modifications begin in September
+> 2026 and are listed in that branch's history. They, and contributions to this
+> fork, carry the additional permission in
+> [APPSTORE-EXCEPTION.md](APPSTORE-EXCEPTION.md). To contribute, see
+> [CONTRIBUTING.md](CONTRIBUTING.md).
+
 
 Linphone is an open source softphone for voice and video over IP calling and instant messaging. It is fully SIP-based, for all calling, presence and IM features.
 General description is available from [linphone web site](https://www.linphone.org/technical-corner/linphone)

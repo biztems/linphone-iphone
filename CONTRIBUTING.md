@@ -1,3 +1,24 @@
+# Contributing to biztems' fork
+
+Pull requests to this fork are welcome.
+
+**Licence of your contribution.** By submitting a pull request to this
+repository, you agree that your contribution is licensed under the GNU General
+Public License version 3, together with the additional permission in
+[APPSTORE-EXCEPTION.md](APPSTORE-EXCEPTION.md), which allows distribution
+through the Apple App Store and similar platforms. You also confirm that you
+wrote the contribution, or otherwise have the right to submit it under these
+terms.
+
+**Fixes that belong upstream.** If your change fixes Linphone itself rather
+than biztems' customisations, please send it to Belledonne Communications
+instead, following their guidelines below, so that every Linphone user
+benefits.
+
+---
+
+*The upstream contributing guidelines from Belledonne Communications follow.*
+
 # Contributing
 
 We love pull requests from everyone. By participating in this project, you
