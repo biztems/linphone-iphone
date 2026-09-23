@@ -11,5 +11,9 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).NotificationService</string>
 	</dict>
+	<key>FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED</key>
+	<true/>
+	<key>FirebaseCrashlyticsCollectionEnabled</key>
+	<false/>
 </dict>
 </plist>

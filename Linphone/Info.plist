@@ -148,5 +148,9 @@
 	</array>
 	<key>UILaunchScreen</key>
 	<false/>
+	<key>FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED</key>
+	<true/>
+	<key>FirebaseCrashlyticsCollectionEnabled</key>
+	<false/>
 </dict>
 </plist>
