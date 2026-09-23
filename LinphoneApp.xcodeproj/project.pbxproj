@@ -1583,7 +1583,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+			shellScript = "# Crashlytics dSYM upload disabled in the biztems fork: GoogleService-Info.plist still names the Belledonne Firebase project.\necho \"Crashlytics dSYM upload disabled (biztems fork)\"\n";
 		};
 		D7D1F5432EDDB9C20034EEB0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
