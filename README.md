@@ -6,6 +6,10 @@
 > fork, carry the additional permission in
 > [APPSTORE-EXCEPTION.md](APPSTORE-EXCEPTION.md). To contribute, see
 > [CONTRIBUTING.md](CONTRIBUTING.md).
+>
+> The app built from this branch is distributed by Biztems SRL as **BizVoIP**.
+> Linphone is a trademark of Belledonne Communications; BizVoIP is not
+> affiliated with or endorsed by Belledonne Communications.
 
 
 Linphone is an open source softphone for voice and video over IP calling and instant messaging. It is fully SIP-based, for all calling, presence and IM features.

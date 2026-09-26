@@ -25,7 +25,8 @@ import os
 import linphonesw
 import linphone
 #if USE_CRASHLYTICS
-import Firebase
+import FirebaseCore
+import FirebaseCrashlytics
 #endif
 
 class Log: LoggingServiceDelegate {

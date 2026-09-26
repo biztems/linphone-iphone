@@ -50,9 +50,10 @@ struct SideMenu: View {
 			VStack {
 				VStack {
 					HStack {
-						Image("linphone")
+						Image("brand-logo-phone-mono")
 							.renderingMode(.template)
 							.resizable()
+							.aspectRatio(contentMode: .fit)
 							.foregroundStyle(Color.orangeMain500)
 							.frame(width: 32, height: 32)
 							.padding(10)

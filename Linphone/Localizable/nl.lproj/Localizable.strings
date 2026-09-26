@@ -1,3 +1,4 @@
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "dialog_yes" = "Ja";
 "Error" = "Fout";
 "menu_copy_chat_message" = "Kopiëren";
@@ -39,7 +40,7 @@
 "assistant_dialog_general_terms_and_privacy_policy_title" = "Algemene voorwaarden & privacybeleid";
 "assistant_dialog_general_terms_label" = "algemene voorwaarden";
 "assistant_dialog_privacy_policy_label" = "privacy beleid";
-"assistant_login_third_party_sip_account" = "Gebruik een SIP-account van derden";
+"assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_no_account_yet" = "Nog geen account?";
 "assistant_permissions_grant_all_of_them" = "OK";
 "assistant_permissions_skip_permissions" = "Doe het later";
@@ -358,7 +359,7 @@
 "start" = "Begin";
 "uri_handler_config_success_toast" = "Configuratie succesvol toegepast";
 "username" = "Gebruikersnaam";
-"welcome_page_2_title" = "Beveiligd";
+"welcome_page_2_title" = "Always reachable";
 "welcome_page_3_title" = "Open-source";
 "welcome_page_title" = "Welkom";
 "7" = "7";
@@ -392,7 +393,7 @@
 "call_transfer_current_call_title" = "Verbind oproep door";
 "call_zrtp_sas_validation_skip" = "Sla over";
 "contact_dialog_delete_title" = "Verwijder %@?";
-"help_about_title" = "Over Linphone";
+"help_about_title" = "Over BizVoIP";
 "settings_contacts_ldap_search_filter_title" = "Filter";
 "[https://sip.linphone.org](https://sip.linphone.org)" = "[https://sip.linphone.org](https://sip.linphone.org)";
 "5" = "5";
@@ -406,7 +407,7 @@
 "assistant_third_party_sip_account_create_linphone_account" = "Ik wil liever een account aanmaken";
 "conference_name_error" = "Confwrentienaamfout";
 "conversation_ephemeral_messages_duration_multiple_days" = "%d dagen";
-"help_about_user_guide_subtitle" = "Leer alle functies van de app te beheersen, stap voor stap.";
+"help_about_user_guide_subtitle" = "Get help from Biztems with your account and calls.";
 "conversation_warning_disabled_because_not_secured_title" = "Dit gesprek is niet versleuteld!";
 "account_settings_apply_international_prefix_title" = "Formateer telefoonnummers met internationaal prefix";
 "account_settings_replace_plus_by_00_title" = "Vervang + door 00 bij het formatteren van telefoonnummers";

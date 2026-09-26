@@ -22,7 +22,8 @@
 import UserNotifications
 import linphonesw
 #if USE_CRASHLYTICS
-import Firebase
+import FirebaseCore
+import FirebaseCrashlytics
 #endif
 
 var LINPHONE_DUMMY_SUBJECT = "dummy subject"

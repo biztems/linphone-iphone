@@ -26,12 +26,12 @@ class AccountLoginViewModel: ObservableObject {
 	
 	@Published var username: String = ""
 	@Published var passwd: String = ""
-	@Published var domain: String = "sip.linphone.org"
+	@Published var domain: String = AppServices.corePreferences.assistantDefaultDomain
 	@Published var displayName: String = ""
 	@Published var transportType: String = "TLS"
 	@Published var authId: String = ""
-	@Published var sipProxyUrl: String = ""
-	@Published var outboundProxy: String = ""
+	@Published var sipProxyUrl: String = AppServices.corePreferences.assistantDefaultProxy
+	@Published var outboundProxy: String = AppServices.corePreferences.assistantDefaultProxy
 	
 	private var mCoreDelegate: CoreDelegate!
 	
@@ -169,10 +169,10 @@ class AccountLoginViewModel: ObservableObject {
 				core.defaultAccount = account
 				
 				DispatchQueue.main.async {
-					self.domain = "sip.linphone.org"
+					self.domain = AppServices.corePreferences.assistantDefaultDomain
 					self.transportType = "TLS"
 					self.authId = ""
-					self.outboundProxy = ""
+					self.outboundProxy = AppServices.corePreferences.assistantDefaultProxy
 				}
 				
 			} catch { NSLog(error.localizedDescription) }

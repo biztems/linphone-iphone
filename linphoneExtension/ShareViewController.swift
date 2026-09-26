@@ -120,7 +120,7 @@ class ShareViewController: SLComposeServiceViewController {
 		let urlStrings = fileURLs.map { $0.path }
 		let joinedURLs = urlStrings.joined(separator: ",")
 
-		let urlScheme = "linphone-message://\(joinedURLs)"
+		let urlScheme = "bizvoip-message://\(joinedURLs)"
 		if let url = URL(string: urlScheme) {
 			var responder: UIResponder? = self
 			while responder != nil {

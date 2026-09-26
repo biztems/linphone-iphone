@@ -28,7 +28,8 @@ import Network
 import SwiftUI
 
 #if USE_CRASHLYTICS
-import Firebase
+import FirebaseCore
+import FirebaseCrashlytics
 #endif
 
 class CoreContext: ObservableObject {

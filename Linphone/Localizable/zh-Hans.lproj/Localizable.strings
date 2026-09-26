@@ -1,3 +1,4 @@
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "bottom_navigation_meetings_label" = "会议";
 "contact_message_action" = "信息";
 "help_title" = "帮助";
@@ -42,7 +43,7 @@
 "assistant_dialog_general_terms_and_privacy_policy_title" = "通用条款和隐私政策";
 "assistant_dialog_general_terms_label" = "通用条款";
 "assistant_dialog_privacy_policy_label" = "隐私政策";
-"assistant_login_third_party_sip_account" = "使用第三方SIP账户";
+"assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_no_account_yet" = "还没有账户？";
 "assistant_permissions_grant_all_of_them" = "OK";
 "assistant_permissions_skip_permissions" = "以后再说";
@@ -352,14 +353,14 @@
 "start" = "开始";
 "uri_handler_config_success_toast" = "配置已成功应用";
 "username" = "用户名";
-"welcome_page_2_title" = "安全";
+"welcome_page_2_title" = "Always reachable";
 "welcome_page_3_title" = "开源";
 "welcome_page_title" = "欢迎";
 "account_settings_dialog_invalid_password_title" = "需要身份验证";
 "account_settings_dialog_invalid_password_hint" = "密码";
 "connection_error_for_non_default_account" = "账户连接错误";
 "default_account_disabled" = "所选账户当前已禁用";
-"help_about_user_guide_subtitle" = "逐步学习如何掌握所有应用程序功能。";
+"help_about_user_guide_subtitle" = "Get help from Biztems with your account and calls.";
 "menu_show_imdn" = "送达状态";
 "conversation_end_to_end_encrypted_event_title" = "端到端加密聊天";
 "conversation_end_to_end_encrypted_event_subtitle" = "此聊天中的消息是端对端e2e加密的。只有您的对话方才能解密它们。";

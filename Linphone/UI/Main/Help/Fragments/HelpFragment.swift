@@ -187,19 +187,21 @@ struct HelpFragment: View {
 									}
 									.padding(.horizontal, 5)
 									
-									Button(
-										action: {
-											helpViewModel.checkForUpdate()
-										}, label: {
-											Text("help_about_check_for_update")
-												.default_text_style_orange_500(styleSize: 14)
-												.lineLimit(1)
-										}
-									)
-									.padding(.horizontal, 15)
-									.padding(.vertical, 10)
-									.background(Color.orangeMain100)
-									.cornerRadius(60)
+									if !AppServices.corePreferences.versionCheckUrlRoot.isEmpty {
+										Button(
+											action: {
+												helpViewModel.checkForUpdate()
+											}, label: {
+												Text("help_about_check_for_update")
+													.default_text_style_orange_500(styleSize: 14)
+													.lineLimit(1)
+											}
+										)
+										.padding(.horizontal, 15)
+										.padding(.vertical, 10)
+										.background(Color.orangeMain100)
+										.cornerRadius(60)
+									}
 								}
 								.background(Color.gray100)
 								.onTapGesture {

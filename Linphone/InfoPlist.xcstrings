@@ -1,0 +1,713 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NSCameraUsageDescription": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "BizVoIP uses the camera for video calls and to scan setup QR codes."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP usa la fotocamera per le videochiamate e per scansionare i codici QR di configurazione."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP utilise l’appareil photo pour les appels vidéo et pour scanner les codes QR de configuration."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP verwendet die Kamera für Videoanrufe und zum Scannen von Einrichtungs-QR-Codes."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP usa la cámara para las videollamadas y para escanear códigos QR de configuración."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP utiliza a câmara para videochamadas e para ler códigos QR de configuração."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP usa a câmera para chamadas de vídeo e para ler códigos QR de configuração."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP gebruikt de camera voor videogesprekken en om QR-codes voor de configuratie te scannen."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP fa servir la càmera per a les videotrucades i per escanejar codis QR de configuració."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP používá fotoaparát pro videohovory a ke skenování konfiguračních QR kódů."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP používa fotoaparát na videohovory a na skenovanie konfiguračných QR kódov."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP использует камеру для видеозвонков и сканирования QR-кодов настройки."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP використовує камеру для відеодзвінків і сканування QR-кодів налаштування."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP 使用相机进行视频通话和扫描设置二维码。"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP käyttää kameraa videopuheluihin ja asetusten QR-koodien skannaamiseen."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A BizVoIP a kamerát videohívásokhoz és a beállítási QR-kódok beolvasásához használja."
+          }
+        }
+      }
+    },
+    "NSContactsUsageDescription": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "BizVoIP shows your contacts so you can call them."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP mostra i tuoi contatti per consentirti di chiamarli."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP affiche vos contacts pour que vous puissiez les appeler."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP zeigt Ihre Kontakte an, damit Sie sie anrufen können."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP muestra tus contactos para que puedas llamarlos."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP mostra os seus contactos para que lhes possa ligar."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP mostra seus contatos para que você possa ligar para eles."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP toont je contacten zodat je ze kunt bellen."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP mostra els teus contactes perquè els puguis trucar."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP zobrazuje vaše kontakty, abyste jim mohli zavolat."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP zobrazuje vaše kontakty, aby ste im mohli zavolať."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP показывает ваши контакты, чтобы вы могли им позвонить."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP показує ваші контакти, щоб ви могли їм зателефонувати."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP 显示你的联系人，方便你拨打电话。"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP näyttää yhteystietosi, jotta voit soittaa niille."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A BizVoIP megjeleníti a névjegyeidet, hogy felhívhasd őket."
+          }
+        }
+      }
+    },
+    "NSMicrophoneUsageDescription": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "BizVoIP needs the microphone for your calls."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP ha bisogno del microfono per le tue chiamate."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP a besoin du micro pour vos appels."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP benötigt das Mikrofon für Ihre Anrufe."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP necesita el micrófono para tus llamadas."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP precisa do microfone para as suas chamadas."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP precisa do microfone para suas chamadas."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP heeft de microfoon nodig voor je gesprekken."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP necessita el micròfon per a les teves trucades."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP potřebuje mikrofon pro vaše hovory."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP potrebuje mikrofón na vaše hovory."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP нужен доступ к микрофону для ваших звонков."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP потрібен мікрофон для ваших дзвінків."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP 需要使用麦克风进行通话。"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP tarvitsee mikrofonia puheluihisi."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A BizVoIP-nek szüksége van a mikrofonra a hívásaidhoz."
+          }
+        }
+      }
+    },
+    "NSLocalNetworkUsageDescription": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "BizVoIP uses the local network to connect your calls."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP usa la rete locale per collegare le tue chiamate."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP utilise le réseau local pour établir vos appels."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP verwendet das lokale Netzwerk, um Ihre Anrufe zu verbinden."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP usa la red local para conectar tus llamadas."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP utiliza a rede local para ligar as suas chamadas."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP usa a rede local para conectar suas chamadas."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP gebruikt het lokale netwerk om je gesprekken te verbinden."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP fa servir la xarxa local per connectar les teves trucades."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP používá místní síť k propojení vašich hovorů."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP používa lokálnu sieť na spojenie vašich hovorov."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP использует локальную сеть для соединения ваших звонков."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP використовує локальну мережу для з’єднання ваших дзвінків."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP 使用本地网络连接你的通话。"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP käyttää lähiverkkoa puheluidesi yhdistämiseen."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A BizVoIP a helyi hálózatot használja a hívásaid összekapcsolásához."
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryUsageDescription": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "BizVoIP uses your photos to set profile pictures."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP usa le tue foto per impostare le immagini del profilo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP utilise vos photos pour définir les images de profil."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP verwendet Ihre Fotos für Profilbilder."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP usa tus fotos para establecer las imágenes de perfil."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP utiliza as suas fotografias para definir imagens de perfil."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP usa suas fotos para definir imagens de perfil."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP gebruikt je foto's om profielfoto's in te stellen."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP fa servir les teves fotos per definir imatges de perfil."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP používá vaše fotky k nastavení profilových obrázků."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP používa vaše fotky na nastavenie profilových obrázkov."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP использует ваши фото для изображений профиля."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP використовує ваші фото для зображень профілю."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP 使用你的照片设置头像。"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP käyttää kuviasi profiilikuvien asettamiseen."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A BizVoIP a fotóidat profilképek beállításához használja."
+          }
+        }
+      }
+    },
+    "NSCalendarsUsageDescription": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "BizVoIP adds your meetings to your calendar."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP aggiunge le tue riunioni al calendario."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP ajoute vos réunions à votre calendrier."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP trägt Ihre Besprechungen in Ihren Kalender ein."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP añade tus reuniones a tu calendario."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP adiciona as suas reuniões ao calendário."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP adiciona suas reuniões ao calendário."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP zet je vergaderingen in je agenda."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP afegeix les teves reunions al calendari."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP přidává vaše schůzky do kalendáře."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP pridáva vaše stretnutia do kalendára."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP добавляет ваши встречи в календарь."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP додає ваші зустрічі до календаря."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP 将你的会议添加到日历。"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP lisää kokouksesi kalenteriin."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A BizVoIP hozzáadja a megbeszéléseidet a naptáradhoz."
+          }
+        }
+      }
+    },
+    "NSCalendarsWriteOnlyAccessUsageDescription": {
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "BizVoIP adds your meetings to your calendar."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP aggiunge le tue riunioni al calendario."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP ajoute vos réunions à votre calendrier."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP trägt Ihre Besprechungen in Ihren Kalender ein."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP añade tus reuniones a tu calendario."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP adiciona as suas reuniões ao calendário."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O BizVoIP adiciona suas reuniões ao calendário."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP zet je vergaderingen in je agenda."
+          }
+        },
+        "ca": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP afegeix les teves reunions al calendari."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP přidává vaše schůzky do kalendáře."
+          }
+        },
+        "sk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP pridáva vaše stretnutia do kalendára."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP добавляет ваши встречи в календарь."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP додає ваші зустрічі до календаря."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP 将你的会议添加到日历。"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BizVoIP lisää kokouksesi kalenteriin."
+          }
+        },
+        "hu": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A BizVoIP hozzáadja a megbeszéléseidet a naptáradhoz."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

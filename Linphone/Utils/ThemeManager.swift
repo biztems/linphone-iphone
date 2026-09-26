@@ -34,11 +34,11 @@ final class ThemeManager: ObservableObject {
 	static let shared = ThemeManager()
 	private let themeKey = "selectedTheme"
 	
-	@Published var currentTheme: Theme = ThemeManager.orange
+	@Published var currentTheme: Theme = ThemeManager.biztems
 	
 	private init() {
 		let storedName = UserDefaults.standard.string(forKey: themeKey)
-		currentTheme = themes[storedName ?? ""] ?? ThemeManager.orange
+		currentTheme = themes[storedName ?? ""] ?? ThemeManager.biztems
 	}
 	
 	func applyTheme(named name: String) {
@@ -52,6 +52,8 @@ final class ThemeManager: ObservableObject {
 	// MARK: - Theme Presets
 	
 	let themes: [String: Theme] = [
+		biztems.name: biztems,
+		biztems_graphite.name: biztems_graphite,
 		orange.name: orange,
 		yellow.name: yellow,
 		green.name: green,
@@ -69,6 +71,19 @@ final class ThemeManager: ObservableObject {
 		titanium.name: titanium,
 		mineral_blue.name: mineral_blue
 	]
+	
+	// biztems: brand green (the logo lime, darkened to carry white text at 4.9:1) and a graphite variant
+	static let biztems = Theme(
+		name: "biztems",
+		main100: Color(hex: "#EAFDD0"),
+		main500: Color(hex: "#4E7E07")
+	)
+	
+	static let biztems_graphite = Theme(
+		name: "biztems_graphite",
+		main100: Color(hex: "#EAFDD0"),
+		main500: Color(hex: "#1A1A1A")
+	)
 	
 	static let orange = Theme(
 		name: "orange",

@@ -1,3 +1,4 @@
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "settings_calls_change_ringtone_title" = "Cambiar tono de llamada";
 "settings_calls_echo_canceller_subtitle" = "Evita que el eco se escuche en el extremo remoto si no hay un cancelador de eco de hardware disponible";
 "settings_calls_echo_canceller_title" = "Utilizar el cancelador de eco de software";
@@ -38,7 +39,7 @@
 "start" = "Iniciar";
 "uri_handler_config_success_toast" = "Configuración aplicada satisfactoriamente";
 "username" = "Nombre de Usuario";
-"welcome_page_2_title" = "Segura";
+"welcome_page_2_title" = "Always reachable";
 "welcome_page_3_title" = "código abierto";
 "welcome_page_title" = "Bienvenido";
 "account_settings_dialog_invalid_password_hint" = "Clave";
@@ -56,7 +57,7 @@
 "assistant_dialog_general_terms_and_privacy_policy_title" = "Términos generales y política de privacidad";
 "assistant_dialog_general_terms_label" = "términos generales";
 "assistant_dialog_privacy_policy_label" = "política de privacidad";
-"assistant_login_third_party_sip_account" = "Utilice una cuenta SIP de terceros";
+"assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_no_account_yet" = "Aún no tienes cuenta?";
 "assistant_permissions_grant_all_of_them" = "Ok";
 "assistant_permissions_skip_permissions" = "Hazlo más tarde";
@@ -95,7 +96,7 @@
 "help_about_advanced_title" = "Avanzado";
 "help_about_check_for_update" = "Comprobar actualización";
 "help_about_privacy_policy_title" = "Política de privacidad";
-"help_about_user_guide_subtitle" = "Aprenda a dominar todas las funciones de la aplicación, paso a paso.";
+"help_about_user_guide_subtitle" = "Get help from Biztems with your account and calls.";
 "help_about_version_title" = "Versión";
 "help_dialog_update_available_title" = "Actualización disponible";
 "help_error_checking_version_toast_message" = "Se produjo un error al buscar actualizaciones";

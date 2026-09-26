@@ -1,10 +1,11 @@
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "dialog_accept" = "Принять";
 "help_title" = "Помощь";
 "manage_account_settings" = "Настройки аккаунта";
 "manage_account_status_cleared_summary" = "Аккаунт отключен, вы не получите никаких звонков или сообщений.";
 "manage_account_status_connected_summary" = "Этот аккаунт в сети, каждый может вам позвонить.";
 "manage_account_status_failed_summary" = "Не удалось подключиться к аккаунту, проверьте настройки.";
-"welcome_page_2_title" = "Безопасный";
+"welcome_page_2_title" = "Always reachable";
 "welcome_page_3_title" = "Открытый исходный код";
 "welcome_page_title" = "Добро пожаловать";
 "account_settings_audio_video_conference_factory_uri_title" = "URI фабрики аудио/видео конференции";
@@ -45,7 +46,7 @@
 "assistant_dialog_general_terms_and_privacy_policy_title" = "Общие положения и политика конфиденциальности";
 "assistant_dialog_general_terms_label" = "общие положения";
 "assistant_dialog_privacy_policy_label" = "политика конфиденциальности";
-"assistant_login_third_party_sip_account" = "Использовать сторонний SIP-аккаунт";
+"assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_no_account_yet" = "Еще нет аккаунта?";
 "assistant_permissions_grant_all_of_them" = "ОК";
 "assistant_permissions_skip_permissions" = "Сделайте это позже";
@@ -201,7 +202,7 @@
 "help_about_advanced_title" = "Расширенный";
 "help_about_check_for_update" = "Проверить обновления";
 "help_about_privacy_policy_title" = "Политика конфиденциальности";
-"help_about_user_guide_subtitle" = "Узнайте, как освоить все функции приложения, шаг за шагом.";
+"help_about_user_guide_subtitle" = "Get help from Biztems with your account and calls.";
 "help_about_version_title" = "Версия";
 "help_dialog_update_available_title" = "Доступно обновление";
 "help_error_checking_version_toast_message" = "Произошла ошибка при проверке обновлений";

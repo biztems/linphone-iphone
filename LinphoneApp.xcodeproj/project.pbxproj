@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B12E4A5DDF54BE584EC9F11B /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B12E2A94DF5E81534BEEACCC /* InfoPlist.xcstrings */; };
 		660AAF7F2B839272004C0FA6 /* msgNotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 660AAF7B2B839271004C0FA6 /* msgNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		660D8A712B517D260092694D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 660D8A702B517D260092694D /* GoogleService-Info.plist */; };
 		6613A0AE2BAEB7DF008923A4 /* MeetingFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6613A0AD2BAEB7DF008923A4 /* MeetingFragment.swift */; };
@@ -204,9 +205,7 @@
 		D7D24D182AC1B4E800C6F35B /* NotoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7D24D122AC1B4E800C6F35B /* NotoSans-ExtraBold.ttf */; };
 		D7D3007A2F684EAF00836032 /* ConversationDeleteMessageBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D300792F684EAE00836032 /* ConversationDeleteMessageBottomSheet.swift */; };
 		D7D5AD7F2DD34F0E00016721 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D7D5AD7E2DD34F0E00016721 /* AppAuth */; };
-		D7D5AD812DD34F1A00016721 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7D5AD802DD34F1A00016721 /* FirebaseAnalytics */; };
 		D7D5AD832DD34F2300016721 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7D5AD822DD34F2300016721 /* FirebaseCrashlytics */; };
-		D7D5AD852DD34F3700016721 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7D5AD842DD34F3700016721 /* FirebaseAnalytics */; };
 		D7D5AD872DD34F3C00016721 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7D5AD862DD34F3C00016721 /* FirebaseCrashlytics */; };
 		D7D67B6A2F601F6100DD9976 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7D67B692F601F6100DD9976 /* AppIntentVocabulary.plist */; };
 		D7D67B6B2F601F6100DD9976 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7D67B692F601F6100DD9976 /* AppIntentVocabulary.plist */; };
@@ -290,6 +289,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B12E2A94DF5E81534BEEACCC /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		660AAF7B2B839271004C0FA6 /* msgNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = msgNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		660AAF842B8392E0004C0FA6 /* msgNotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = msgNotificationService.entitlements; sourceTree = "<group>"; };
 		660D8A702B517D260092694D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -573,7 +573,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7D5AD872DD34F3C00016721 /* FirebaseCrashlytics in Frameworks */,
-				D7D5AD852DD34F3700016721 /* FirebaseAnalytics in Frameworks */,
 				C618BF582D75CA0D005A00E0 /* linphonesw in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,7 +599,6 @@
 				D7DF8BE72E2104DC003A3BC7 /* ElegantEmojiPicker in Frameworks */,
 				C618BF562D75CA03005A00E0 /* linphonesw in Frameworks */,
 				D7D5AD832DD34F2300016721 /* FirebaseCrashlytics in Frameworks */,
-				D7D5AD812DD34F1A00016721 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +806,7 @@
 				D719ABBA2ABC67BF00B41C10 /* Assets.xcassets */,
 				D719ABBC2ABC67BF00B41C10 /* Linphone.entitlements */,
 				D7A2EDDA2AC19EEC005D90FC /* Info.plist */,
+				B12E2A94DF5E81534BEEACCC /* InfoPlist.xcstrings */,
 				D737AEED2DA011F2005C1280 /* Localizable.strings */,
 				D719ABBD2ABC67BF00B41C10 /* Preview Content */,
 				D7D24D0C2AC1B4C700C6F35B /* Fonts */,
@@ -1529,6 +1528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12E4A5DDF54BE584EC9F11B /* InfoPlist.xcstrings in Resources */,
 				D7D24D142AC1B4E800C6F35B /* NotoSans-Regular.ttf in Resources */,
 				D7BC10D72F4EF25400F09BDA /* incoming_chat.wav in Resources */,
 				D7D24D182AC1B4E800C6F35B /* NotoSans-ExtraBold.ttf in Resources */,
@@ -1583,7 +1583,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Crashlytics dSYM upload disabled in the biztems fork: GoogleService-Info.plist still names the Belledonne Firebase project.\necho \"Crashlytics dSYM upload disabled (biztems fork)\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 		D7D1F5432EDDB9C20034EEB0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1943,7 +1943,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = msgNotificationService/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = msgNotificationService;
+				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1986,7 +1986,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = msgNotificationService/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = msgNotificationService;
+				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -2266,16 +2266,16 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Linphone/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Linphone;
+				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = YES;
 				INFOPLIST_KEY_ITSEncryptionExportComplianceCode = "b5cb085f-772a-4a4f-8c77-5d1332b1f93f";
-				INFOPLIST_KEY_NSCalendarsUsageDescription = "Deprecated - Prior to iOS 17 full calendar access is required";
-				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Camera usage is required for video VOIP calls";
-				INFOPLIST_KEY_NSContactsUsageDescription = "Make calls with your friends";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "App requires access to the local network to establish VoIP connections";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone usage is required for VOIP calls";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Share photos with your friends and customize avatars";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "BizVoIP adds your meetings to your calendar.";
+				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "BizVoIP adds your meetings to your calendar.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "BizVoIP uses the camera for video calls and to scan setup QR codes.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "BizVoIP shows your contacts so you can call them.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "BizVoIP uses the local network to connect your calls.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "BizVoIP needs the microphone for your calls.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BizVoIP uses your photos to set profile pictures.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -2328,16 +2328,16 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Linphone/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Linphone;
+				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = YES;
 				INFOPLIST_KEY_ITSEncryptionExportComplianceCode = "b5cb085f-772a-4a4f-8c77-5d1332b1f93f";
-				INFOPLIST_KEY_NSCalendarsUsageDescription = "Deprecated - Prior to iOS 17 full calendar access is required";
-				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Camera usage is required for video VOIP calls";
-				INFOPLIST_KEY_NSContactsUsageDescription = "Make calls with your friends";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "App requires access to the local network to establish VoIP connections";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone usage is required for VOIP calls";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Share photos with your friends and customize avatars";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "BizVoIP adds your meetings to your calendar.";
+				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "BizVoIP adds your meetings to your calendar.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "BizVoIP uses the camera for video calls and to scan setup QR codes.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "BizVoIP shows your contacts so you can call them.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "BizVoIP uses the local network to connect your calls.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "BizVoIP needs the microphone for your calls.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BizVoIP uses your photos to set profile pictures.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -2382,7 +2382,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = linphoneExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = linphoneExtension;
+				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2416,7 +2416,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = linphoneExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = linphoneExtension;
+				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2449,7 +2449,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = intentsExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = intentsExtension;
+				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2485,7 +2485,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = intentsExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = intentsExtension;
+				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2628,20 +2628,10 @@
 			package = D7D5AD7B2DD34E4D00016721 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
 			productName = AppAuth;
 		};
-		D7D5AD802DD34F1A00016721 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D7D5AD7C2DD34E7C00016721 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
 		D7D5AD822DD34F2300016721 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D7D5AD7C2DD34E7C00016721 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
-		};
-		D7D5AD842DD34F3700016721 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D7D5AD7C2DD34E7C00016721 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
 		};
 		D7D5AD862DD34F3C00016721 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;

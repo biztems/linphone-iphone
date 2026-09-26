@@ -16,6 +16,7 @@
 "account_settings_bundle_mode_title" = "Režim zoskupenia";
 "account_settings_mwi_uri_title" = "URI adresa servera MWI (Message Waiting Indicator)";
 "account_settings_dialog_invalid_password_title" = "Vyžaduje sa overenie";
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "bottom_navigation_contacts_label" = "Kontakty";
 "bottom_navigation_calls_label" = "Hovory";
 "account_settings_voicemail_uri_title" = "URI adresa hlasovej schránky";
@@ -124,7 +125,7 @@
 "settings_calls_echo_canceller_title" = "Použiť softvérové potlačenie ozveny";
 "help_title" = "Pomoc";
 "settings_calls_auto_record_title" = "Automaticky spustiť nahrávanie hovorov";
-"help_about_user_guide_subtitle" = "Naučte sa krok za krokom ovládať všetky funkcie aplikácie.";
+"help_about_user_guide_subtitle" = "Get help from Biztems with your account and calls.";
 "help_troubleshooting_firebase_project_title" = "ID Firebase project";
 "manage_account_status_progress_summary" = "Účet sa pripája k serveru, prosím, čakajte…";
 "settings_calls_title" = "Hovory";
@@ -134,7 +135,7 @@
 "account_settings_cpim_in_basic_conversations_title" = "Použiť CPIM v \"základných\" konverzáciách";
 "account_settings_conference_factory_uri_title" = "URI adresa pre vytváranie konferencií";
 "manage_account_device_remove" = "Odstrániť";
-"welcome_page_2_title" = "Zabezpečená";
+"welcome_page_2_title" = "Always reachable";
 "welcome_page_3_title" = "Otvorená";
 "welcome_page_title" = "Vitajte";
 "account_settings_dialog_invalid_password_hint" = "Heslo";
@@ -151,7 +152,7 @@
 "assistant_dialog_general_terms_and_privacy_policy_title" = "Všeobecné podmienky a zásady ochrany súkromia";
 "assistant_dialog_general_terms_label" = "všeobecné podmienky";
 "assistant_dialog_privacy_policy_label" = "zásady ochrany súkromia";
-"assistant_login_third_party_sip_account" = "Použiť SIP účet tretej strany";
+"assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_no_account_yet" = "Nemáte ešte účet?";
 "assistant_permissions_grant_all_of_them" = "OK";
 "assistant_permissions_skip_permissions" = "Vykonať neskôr";
@@ -359,8 +360,8 @@
 "connection_error_for_non_default_account" = "Chyba pripojenia účtu(-ov)";
 "default_account_disabled" = "Zvolený účet je momentálne zakázaný";
 "generic_address_picker_suggestions_list_title" = "Návrhy";
-"help_about_title" = "O aplikácii Linphone";
-"help_about_contribute_translations_title" = "Prispieť do prekladu Linphone";
+"help_about_title" = "O aplikácii BizVoIP";
+"help_about_contribute_translations_title" = "Zdrojový kód";
 "help_about_open_source_licenses_subtitle" = "© Belledonne Communications 2010-2024";
 "help_about_open_source_licenses_title" = "GNU General Public License v3.0";
 "list_filter_no_result_found" = "Žiadne výsledky…";

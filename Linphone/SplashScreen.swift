@@ -24,15 +24,13 @@ struct SplashScreen: View {
 
 	var body: some View {
 		ZStack {
-			Color.white
+			Color(hex: "#1A1A1A")
 				.ignoresSafeArea()
 
-			Image("linphone")
+			Image("brand-logo-phone")
 				.resizable()
-				.renderingMode(.template)
 				.aspectRatio(contentMode: .fit)
 				.frame(width: 240, height: 128)
-				.foregroundColor(ThemeManager.shared.currentTheme.main500)
 
 			ProgressView()
 				.controlSize(.small)

@@ -318,7 +318,7 @@ struct RootView: View {
 			}
 		}
 		.onOpenURL { url in
-			if SharedMainViewModel.shared.displayedConversation != nil && url.absoluteString.contains("linphone-message://") {
+			if SharedMainViewModel.shared.displayedConversation != nil && url.absoluteString.contains("bizvoip-message://") {
 				SharedMainViewModel.shared.displayedConversation = nil
 			}
 			if coreContext.coreIsStarted {

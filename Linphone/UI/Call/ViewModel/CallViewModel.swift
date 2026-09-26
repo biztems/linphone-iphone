@@ -259,7 +259,7 @@ class CallViewModel: ObservableObject {
 
 	private func postEarpieceEnforcementNotification() {
 		let content = UNMutableNotificationContent()
-		content.title = "Linphone"
+		content.title = Bundle.main.displayName
 		content.body = String(localized: "notification_earpiece_enforcement_message")
 		content.sound = .default
 

@@ -36,7 +36,7 @@ extension IntentHandler: INStartCallIntentHandling {
 		}
 
 		let isVideo = intent.callCapability == .videoCall
-		let activity = NSUserActivity(activityType: "org.linphone.startCall")
+		let activity = NSUserActivity(activityType: "it.biztems.phone.startCall")
 		activity.userInfo = ["number": number, "isVideo": isVideo]
 
 		completion(.init(code: .continueInApp, userActivity: activity))

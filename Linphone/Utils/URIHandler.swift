@@ -25,11 +25,11 @@ import SwiftUI
 class URIHandler {
 	
 	// Need to cover all Info.plist URL schemes.
-	private static let callSchemes = ["sip", "sip-linphone", "linphone-sip", "tel", "callto"]
-	private static let secureCallSchemes = ["sips", "sips-linphone", "linphone-sips"]
-	private static let configurationSchemes = ["linphone-config"]
-	private static let sharedExtensionSchemes = ["linphone-message"]
-	private static let mentionSchemes = ["linphone-mention"]
+	private static let callSchemes = ["sip", "sip-bizvoip", "bizvoip-sip", "tel", "callto"]
+	private static let secureCallSchemes = ["sips", "sips-bizvoip", "bizvoip-sips"]
+	private static let configurationSchemes = ["bizvoip-config"]
+	private static let sharedExtensionSchemes = ["bizvoip-message"]
+	private static let mentionSchemes = ["bizvoip-mention"]
 
 	private static var uriHandlerCoreDelegate: CoreDelegateStub?
 	

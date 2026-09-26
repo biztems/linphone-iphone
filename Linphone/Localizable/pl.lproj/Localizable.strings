@@ -7,13 +7,14 @@
 "assistant_dialog_general_terms_label" = "ogólne warunki";
 "assistant_dialog_privacy_policy_label" = "polityka prywatności";
 "assistant_dialog_confirm_phone_number_title" = "Potwierdź numer telefonu";
-"assistant_login_third_party_sip_account" = "Użyj konta SIP innej firmy";
+"assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_create_account_using_email_on_our_web_platform" = "Załóż konto, podając swój adres e-mail na stronie:";
 "assistant_already_have_an_account" = "Masz już konto?";
 "assistant_permissions_grant_all_of_them" = "OK";
 "assistant_permissions_skip_permissions" = "Zrób to później";
 "assistant_qr_code_invalid_toast" = "Nieprawidłowy kod QR!";
 "assistant_sip_account_transport_protocol" = "Transport";
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "bottom_navigation_contacts_label" = "Kontakty";
 "bottom_navigation_calls_label" = "Połączenia";
 "bottom_navigation_conversations_label" = "Rozmowy";
@@ -65,7 +66,7 @@
 "start" = "Rozpocznij";
 "uri_handler_config_success_toast" = "Konfiguracja została pomyślnie zastosowana";
 "username" = "Nazwa użytkownika";
-"welcome_page_2_title" = "Zabezpieczone";
+"welcome_page_2_title" = "Always reachable";
 "welcome_page_3_title" = "Open source";
 "welcome_page_title" = "Witamy";
 "dialog_confirm" = "Potwierdź";

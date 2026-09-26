@@ -26,9 +26,10 @@ struct WelcomePage1Fragment: View {
 		VStack {
 			Spacer()
 			VStack {
-				Image("linphone")
+				Image("brand-logo-phone-mono")
 					.renderingMode(.template)
 					.resizable()
+					.aspectRatio(contentMode: .fit)
 					.foregroundStyle(Color.orangeMain500)
 					.frame(width: 100, height: 100)
 				Text(Bundle.main.displayName)

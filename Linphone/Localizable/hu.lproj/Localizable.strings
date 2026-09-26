@@ -12,7 +12,7 @@
 "assistant_dialog_general_terms_and_privacy_policy_title" = "Általános feltételek és biztonsági szabályok";
 "assistant_dialog_general_terms_label" = "általános feltételek";
 "assistant_dialog_privacy_policy_label" = "biztonsági szabályok";
-"assistant_login_third_party_sip_account" = "Harmadik féltől származó SIP fiók használata";
+"assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_no_account_yet" = "Nincs még fiókja?";
 "assistant_permissions_grant_all_of_them" = "OK";
 "assistant_permissions_skip_permissions" = "Később";
@@ -20,6 +20,7 @@
 "assistant_qr_code_invalid_toast" = "Érvénytelen QR–kód!";
 "assistant_scan_qr_code" = "QR–kód beolvasása";
 "assistant_sip_account_transport_protocol" = "SIP átvitel";
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "assistant_third_party_sip_account_warning_ok" = "Elfogadom";
 "authentication_id" = "Azonosító ID (ha különbözik)";
 "bottom_navigation_calls_label" = "Hívások";
@@ -81,7 +82,7 @@
 "start" = "Indítás";
 "uri_handler_config_success_toast" = "A konfiguráció sikeresen alkalmazva";
 "username" = "Felhasználónév";
-"welcome_page_2_title" = "Biztonságos";
+"welcome_page_2_title" = "Always reachable";
 "welcome_page_3_title" = "Nyílt forráskódú";
 "welcome_page_title" = "Üdvözöljük";
 "dialog_do_not_show_anymore" = "Ne mutassa többet ezt az ablakot";

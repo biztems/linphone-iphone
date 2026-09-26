@@ -6,4 +6,5 @@
 "%lld" = "%lld";
 "[https://sip.linphone.org](https://sip.linphone.org)" = "[https://sip.linphone.org](https://sip.linphone.org)";
 ": %@" = ": %@";
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "notification_earpiece_enforcement_message" = "Use apenas o auricular. As outras saídas de áudio estão desativadas.";

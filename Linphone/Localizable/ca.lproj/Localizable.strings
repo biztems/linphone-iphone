@@ -1,5 +1,6 @@
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "notification_earpiece_enforcement_message" = "Si us plau, utilitzeu només l'auricular. Les altres sortides d'àudio estan desactivades.";
-"welcome_page_2_title" = "Assegurada";
+"welcome_page_2_title" = "Always reachable";
 "welcome_page_title" = "Benvingut";
 "conference_action_show_participants" = "Participants";
 "conversation_add_participants_title" = "Afegeix participants";

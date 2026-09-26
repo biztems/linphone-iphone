@@ -9,6 +9,7 @@
 "%lld" = "%lld";
 "%lld %@" = "%1$lld %2$@";
 "+" = "+";
+"assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "|" = "|";
 "❤️" = "❤️";
 "👍" = "👍";

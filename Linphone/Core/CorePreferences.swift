@@ -409,12 +409,30 @@ class CorePreferences: ObservableObject {
 	
 	var themeMainColor: String {
 		get {
-			let raw = config.getString(section: "ui", key: "theme_main_color", defaultString: "orange")
-			return safeString(raw, defaultValue: "orange")
+			let raw = config.getString(section: "ui", key: "theme_main_color", defaultString: "biztems")
+			return safeString(raw, defaultValue: "biztems")
 		}
 		set {
 			config.setString(section: "ui", key: "theme_main_color", value: newValue)
 		}
+	}
+	
+	// biztems: hides sign-in and registration for linphone.org accounts
+	var disableLinphoneAccounts: Bool {
+		config.getBool(section: "ui", key: "disable_linphone_accounts", defaultValue: false)
+	}
+	
+	// biztems: defaults of the manual SIP account form
+	var assistantDefaultDomain: String {
+		config.getString(section: "assistant", key: "default_domain", defaultString: "sip.linphone.org")
+	}
+	
+	var assistantDefaultProxy: String {
+		config.getString(section: "assistant", key: "default_proxy", defaultString: "")
+	}
+	
+	var versionCheckUrlRoot: String {
+		config.getString(section: "misc", key: "version_check_url_root", defaultString: "")
 	}
 	
 	var vfsEnabled: Bool {

@@ -179,108 +179,126 @@ struct LoginFragment: View {
 			.padding(.bottom, 20)
 			
 			VStack(alignment: .leading) {
-				Text(String(localized: "username")+"*")
-					.default_text_style_700(styleSize: 15)
-					.padding(.bottom, -5)
+				if !AppServices.corePreferences.disableLinphoneAccounts {
+					Text(String(localized: "username")+"*")
+						.default_text_style_700(styleSize: 15)
+						.padding(.bottom, -5)
 				
-				TextField("username", text: $accountLoginViewModel.username)
-					.default_text_style(styleSize: 15)
-					.disableAutocorrection(true)
-					.autocapitalization(.none)
-					.frame(height: 25)
+					TextField("username", text: $accountLoginViewModel.username)
+						.default_text_style(styleSize: 15)
+						.disableAutocorrection(true)
+						.autocapitalization(.none)
+						.frame(height: 25)
+						.padding(.horizontal, 20)
+						.padding(.vertical, 15)
+						.cornerRadius(60)
+						.overlay(
+							RoundedRectangle(cornerRadius: 60)
+								.inset(by: 0.5)
+								.stroke(isNameFocused ? Color.orangeMain500 : Color.gray200, lineWidth: 1)
+						)
+						.padding(.bottom)
+						.focused($isNameFocused)
+				
+					Text(String(localized: "password")+"*")
+						.default_text_style_700(styleSize: 15)
+						.padding(.bottom, -5)
+				
+					ZStack(alignment: .trailing) {
+						Group {
+							if isSecured {
+								SecureField("password", text: $accountLoginViewModel.passwd)
+									.default_text_style(styleSize: 15)
+									.frame(height: 25)
+									.focused($isPasswordFocused)
+							} else {
+								TextField("password", text: $accountLoginViewModel.passwd)
+									.default_text_style(styleSize: 15)
+									.disableAutocorrection(true)
+									.autocapitalization(.none)
+									.frame(height: 25)
+									.focused($isPasswordFocused)
+							}
+						}
+					
+						Button(action: {
+							isSecured.toggle()
+						}, label: {
+							Image(self.isSecured ? "eye-slash" : "eye")
+								.renderingMode(.template)
+								.resizable()
+								.foregroundStyle(Color.grayMain2c500)
+								.frame(width: 20, height: 20)
+						})
+					}
 					.padding(.horizontal, 20)
 					.padding(.vertical, 15)
 					.cornerRadius(60)
 					.overlay(
 						RoundedRectangle(cornerRadius: 60)
 							.inset(by: 0.5)
-							.stroke(isNameFocused ? Color.orangeMain500 : Color.gray200, lineWidth: 1)
+							.stroke(isPasswordFocused ? Color.orangeMain500 : Color.gray200, lineWidth: 1)
 					)
 					.padding(.bottom)
-					.focused($isNameFocused)
 				
-				Text(String(localized: "password")+"*")
-					.default_text_style_700(styleSize: 15)
-					.padding(.bottom, -5)
+					Button(action: {
+						SharedMainViewModel.shared.changeDisplayProfileMode()
+						self.accountLoginViewModel.login()
+						coreContext.loggingInProgress = true
+					}, label: {
+						Text("assistant_account_login")
+							.default_text_style_white_600(styleSize: 20)
+							.frame(height: 35)
+							.frame(maxWidth: .infinity)
+					})
+					.padding(.horizontal, 20)
+					.padding(.vertical, 10)
+					.background((accountLoginViewModel.username.isEmpty || accountLoginViewModel.passwd.isEmpty) ? Color.orangeMain100 : Color.orangeMain500)
+					.cornerRadius(60)
+					.disabled(accountLoginViewModel.username.isEmpty || accountLoginViewModel.passwd.isEmpty)
+					.padding(.bottom)
 				
-				ZStack(alignment: .trailing) {
-					Group {
-						if isSecured {
-							SecureField("password", text: $accountLoginViewModel.passwd)
-								.default_text_style(styleSize: 15)
-								.frame(height: 25)
-								.focused($isPasswordFocused)
-						} else {
-							TextField("password", text: $accountLoginViewModel.passwd)
-								.default_text_style(styleSize: 15)
-								.disableAutocorrection(true)
-								.autocapitalization(.none)
-								.frame(height: 25)
-								.focused($isPasswordFocused)
+					NavigationLink(destination: {
+						RecoverAccountFragment()
+					}, label: {
+						Text(String(localized: "assistant_forgotten_password"))
+							.underline()
+							.tint(Color.grayMain2c600)
+							.default_text_style_600(styleSize: 15)
+							.foregroundStyle(Color.grayMain2c500)
+					})
+					.frame(maxWidth: .infinity)
+					.padding(.bottom, 30)
+				
+					HStack {
+						VStack {
+							Divider()
+						}
+						Text("or")
+							.default_text_style(styleSize: 15)
+							.foregroundStyle(Color.grayMain2c500)
+						VStack {
+							Divider()
 						}
 					}
-					
-					Button(action: {
-						isSecured.toggle()
-					}, label: {
-						Image(self.isSecured ? "eye-slash" : "eye")
+					.padding(.bottom, 10)
+				} else {
+					VStack(spacing: 12) {
+						Image("brand-logo-phone-mono")
 							.renderingMode(.template)
 							.resizable()
+							.aspectRatio(contentMode: .fit)
+							.foregroundStyle(Color.orangeMain500)
+							.frame(height: 72)
+						
+						Text("assistant_sip_only_login_message")
+							.default_text_style(styleSize: 15)
 							.foregroundStyle(Color.grayMain2c500)
-							.frame(width: 20, height: 20)
-					})
-				}
-				.padding(.horizontal, 20)
-				.padding(.vertical, 15)
-				.cornerRadius(60)
-				.overlay(
-					RoundedRectangle(cornerRadius: 60)
-						.inset(by: 0.5)
-						.stroke(isPasswordFocused ? Color.orangeMain500 : Color.gray200, lineWidth: 1)
-				)
-				.padding(.bottom)
-				
-				Button(action: {
-					SharedMainViewModel.shared.changeDisplayProfileMode()
-					self.accountLoginViewModel.login()
-					coreContext.loggingInProgress = true
-				}, label: {
-					Text("assistant_account_login")
-						.default_text_style_white_600(styleSize: 20)
-						.frame(height: 35)
-						.frame(maxWidth: .infinity)
-				})
-				.padding(.horizontal, 20)
-				.padding(.vertical, 10)
-				.background((accountLoginViewModel.username.isEmpty || accountLoginViewModel.passwd.isEmpty) ? Color.orangeMain100 : Color.orangeMain500)
-				.cornerRadius(60)
-				.disabled(accountLoginViewModel.username.isEmpty || accountLoginViewModel.passwd.isEmpty)
-				.padding(.bottom)
-				
-				NavigationLink(destination: {
-					RecoverAccountFragment()
-				}, label: {
-					Text(String(localized: "assistant_forgotten_password"))
-						.underline()
-						.tint(Color.grayMain2c600)
-						.default_text_style_600(styleSize: 15)
-						.foregroundStyle(Color.grayMain2c500)
-				})
-				.frame(maxWidth: .infinity)
-				.padding(.bottom, 30)
-				
-				HStack {
-					VStack {
-						Divider()
+							.multilineTextAlignment(.center)
 					}
-					Text("or")
-						.default_text_style(styleSize: 15)
-						.foregroundStyle(Color.grayMain2c500)
-					VStack {
-						Divider()
-					}
+					.frame(maxWidth: .infinity)
+					.padding(.vertical, 30)
 				}
-				.padding(.bottom, 10)
 				
 				NavigationLink(destination: {
 					QrCodeScannerFragment()
@@ -310,7 +328,11 @@ struct LoginFragment: View {
 				.padding(.bottom)
 				
 				NavigationLink(isActive: $isLinkSIPActive, destination: {
-					ThirdPartySipAccountWarningFragment(accountLoginViewModel: accountLoginViewModel)
+					if AppServices.corePreferences.disableLinphoneAccounts {
+						ThirdPartySipAccountLoginFragment(accountLoginViewModel: accountLoginViewModel)
+					} else {
+						ThirdPartySipAccountWarningFragment(accountLoginViewModel: accountLoginViewModel)
+					}
 				}, label: {
 					Text("assistant_login_third_party_sip_account")
 						.default_text_style_orange_600(styleSize: 20)
@@ -318,7 +340,7 @@ struct LoginFragment: View {
 						.frame(maxWidth: .infinity)
 					
 				})
-				.disabled(!SharedMainViewModel.shared.generalTermsAccepted)
+				.disabled(!SharedMainViewModel.shared.generalTermsAccepted && !AppServices.corePreferences.disableLinphoneAccounts)
 				.padding(.horizontal, 20)
 				.padding(.vertical, 10)
 				.cornerRadius(60)
@@ -331,7 +353,7 @@ struct LoginFragment: View {
 				.simultaneousGesture(
 					TapGesture().onEnded {
 						self.linkActive = "SIP"
-						if !SharedMainViewModel.shared.generalTermsAccepted {
+						if !SharedMainViewModel.shared.generalTermsAccepted && !AppServices.corePreferences.disableLinphoneAccounts {
 							withAnimation {
 								self.isShowPopup.toggle()
 							}
@@ -346,41 +368,43 @@ struct LoginFragment: View {
 			
 			Spacer()
 			
-			HStack(alignment: .center) {
+			if !AppServices.corePreferences.disableLinphoneAccounts {
+				HStack(alignment: .center) {
 				
-				Spacer()
+					Spacer()
 				
-				Text("assistant_no_account_yet")
-					.default_text_style(styleSize: 15)
-					.foregroundStyle(Color.grayMain2c700)
+					Text("assistant_no_account_yet")
+						.default_text_style(styleSize: 15)
+						.foregroundStyle(Color.grayMain2c700)
+						.padding(.horizontal, 10)
+				
+					NavigationLink(destination: RegisterFragment(), isActive: $isLinkREGActive, label: { Text("assistant_account_register")
+							.default_text_style_white_600(styleSize: 20)
+							.frame(height: 35)
+					})
+					.disabled(!SharedMainViewModel.shared.generalTermsAccepted)
+					.padding(.horizontal, 20)
+					.padding(.vertical, 10)
+					.background(Color.orangeMain500)
+					.cornerRadius(60)
 					.padding(.horizontal, 10)
-				
-				NavigationLink(destination: RegisterFragment(), isActive: $isLinkREGActive, label: { Text("assistant_account_register")
-						.default_text_style_white_600(styleSize: 20)
-						.frame(height: 35)
-				})
-				.disabled(!SharedMainViewModel.shared.generalTermsAccepted)
-				.padding(.horizontal, 20)
-				.padding(.vertical, 10)
-				.background(Color.orangeMain500)
-				.cornerRadius(60)
-				.padding(.horizontal, 10)
-				.simultaneousGesture(
-					TapGesture().onEnded {
-						self.linkActive = "REG"
-						if !SharedMainViewModel.shared.generalTermsAccepted {
-							withAnimation {
-								self.isShowPopup.toggle()
+					.simultaneousGesture(
+						TapGesture().onEnded {
+							self.linkActive = "REG"
+							if !SharedMainViewModel.shared.generalTermsAccepted {
+								withAnimation {
+									self.isShowPopup.toggle()
+								}
+							} else {
+								self.isLinkREGActive = true
 							}
-						} else {
-							self.isLinkREGActive = true
 						}
-					}
-				)
+					)
 				
-				Spacer()
+					Spacer()
+				}
+				.padding(.bottom)
 			}
-			.padding(.bottom)
 			
 			Image("mountain2")
 				.resizable()

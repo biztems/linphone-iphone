@@ -28,7 +28,7 @@ class SingleSignOnManager {
 	private let TAG = "[SSO]"
 	private let clientId = AppServices.corePreferences.singleSignOnClientId
 	private let userDefaultSSOKey = "sso-authstate"
-	let ssoRedirectUri = URL(string: "org.linphone:/openidcallback")!
+	let ssoRedirectUri = URL(string: "it.biztems.phone:/openidcallback")!
 	private var singleSignOnUrl = ""
 	private var username: String = ""
 	private var authState: AuthState?

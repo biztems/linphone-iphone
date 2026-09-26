@@ -1014,7 +1014,7 @@ struct DynamicLinkText: View {
 		   let participant = participantConversationModel.first(
 				where: { ($0.address.dropFirst(4).split(separator: "@").first ?? "") == word.dropFirst() }
 		   ),
-		   let mentionURL = URL(string: "linphone-mention://\(participant.address)")
+		   let mentionURL = URL(string: "bizvoip-mention://\(participant.address)")
 		{
 			var mention = AttributedString("@" + participant.name)
 			mention.link = mentionURL
