@@ -138,28 +138,38 @@ class AccountLoginViewModel: ObservableObject {
 #endif
 				accountParams.pushNotificationConfig?.provider = "apns" + pushEnvironment
 				
-				self.mCoreDelegate = CoreDelegateStub(onAccountRegistrationStateChanged: { (core: Core, account: Account, state: RegistrationState, message: String) in
+				// Now that our AccountParams is configured, we can create the Account object
+				let account = try core.createAccount(params: accountParams)
+				
+				// biztems: watch only this new account, and only until its first registration
+				// succeeds or fails. The listener used to stay on the core for good and delete
+				// any account whose registration failed later, e.g. while the server restarted.
+				if let previousDelegate = self.mCoreDelegate {
+					core.removeDelegate(delegate: previousDelegate)
+				}
+				var watcher: CoreDelegate?
+				watcher = CoreDelegateStub(onAccountRegistrationStateChanged: { (core: Core, changedAccount: Account, state: RegistrationState, message: String) in
+					guard changedAccount.getCobject == account.getCobject, state == .Ok || state == .Failed,
+						  let delegate = watcher else { return }
+					watcher = nil
+					core.removeDelegate(delegate: delegate)
 					
 					Log.info("New registration state is \(state) for user id " +
-							 "\( String(describing: account.params?.identityAddress?.asString())) = \(message)\n")
+							 "\( String(describing: changedAccount.params?.identityAddress?.asString())) = \(message), no longer watching it\n")
 					
-					switch state {
-					case .Failed:  // If registration failed, remove account from core
-						if let authInfo = account.findAuthInfo() {
+					if state == .Failed {  // If registration failed, remove account from core
+						if let authInfo = changedAccount.findAuthInfo() {
 							core.removeAuthInfo(info: authInfo)
 						}
 						
-						Log.warn("Registration failed for account \(account.displayName()), deleting it from core")
-						core.removeAccountWithData(account: account)
-					default:
-						break
+						Log.warn("Registration failed for account \(changedAccount.displayName()), deleting it from core")
+						core.removeAccountWithData(account: changedAccount)
 					}
 				})
-				
-				self.coreContext.mCore.addDelegate(delegate: self.mCoreDelegate)
-				
-				// Now that our AccountParams is configured, we can create the Account object
-				let account = try core.createAccount(params: accountParams)
+				self.mCoreDelegate = watcher
+				if let watcher = watcher {
+					core.addDelegate(delegate: watcher)
+				}
 				
 				// Now let's add our objects to the Core
 				core.addAuthInfo(info: authInfo)
