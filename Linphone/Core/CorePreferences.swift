@@ -424,7 +424,7 @@ class CorePreferences: ObservableObject {
 	
 	// biztems: defaults of the manual SIP account form
 	var assistantDefaultDomain: String {
-		config.getString(section: "assistant", key: "default_domain", defaultString: "sip.linphone.org")
+		config.getString(section: "assistant", key: "default_domain", defaultString: "")
 	}
 	
 	var assistantDefaultProxy: String {

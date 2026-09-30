@@ -404,7 +404,7 @@
 "manage_account_device_remove" = "Remove";
 "manage_account_devices_title" = "Devices";
 "manage_account_dialog_international_prefix_help_message" = "Pick your country to allow BizVoIP to match your contacts.";
-"manage_account_dialog_remove_account_message" = "If you wish to delete your account permanently, go to: https://sip.linphone.org";
+"manage_account_dialog_remove_account_message" = "This only removes the account from this phone. To close it, ask your administrator or Biztems.";
 "manage_account_dialog_remove_account_title" = "Sign out of your account?";
 "manage_account_outbound_proxy" = "Outbound SIP Proxy";
 "manage_account_dialog_outbound_proxy_help_message" = "If this field is filled, the outbound proxy will be enabled automatically. Leave it empty to disable it.";

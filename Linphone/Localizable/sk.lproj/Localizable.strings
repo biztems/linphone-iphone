@@ -67,7 +67,7 @@
 "manage_account_delete" = "Odhlásiť sa";
 "manage_account_device_last_connection" = "Posledné pripojenie:";
 "manage_account_dialog_remove_account_title" = "Odhlásiť sa z Vášho účtu?";
-"manage_account_dialog_remove_account_message" = "Pokiaľ si želáte nenávratne zmazať svoj účet, navštívte: https://sip.linphone.org";
+"manage_account_dialog_remove_account_message" = "This only removes the account from this phone. To close it, ask your administrator or Biztems.";
 "history_list_empty_history" = "Momentálne žiadny hovor…";
 "manage_account_title" = "Spravovať účet";
 "manage_account_status_failed_summary" = "Pripojenie účtu zlyhalo, skontrolujte nastavenia.";

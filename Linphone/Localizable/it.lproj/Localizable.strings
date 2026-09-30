@@ -329,7 +329,7 @@
 "Interoperable mode" = "Modalità interoperabile";
 "manage_account_details_title" = "Dettagli";
 "manage_account_delete" = "Esci";
-"manage_account_dialog_remove_account_message" = "Per eliminare definitivamente il tuo account vai su: https://sip.linphone.org";
+"manage_account_dialog_remove_account_message" = "L'account viene tolto solo da questo telefono. Per chiuderlo, chiedi al tuo amministratore o a Biztems.";
 "manage_account_dialog_remove_account_title" = "Vuoi uscire dal tuo account?";
 "manage_account_edit_picture" = "Modifica l'immagine";
 "manage_account_dialog_outbound_proxy_help_message" = "Se questo campo è compilato, il proxy in uscita viene abilitato automaticamente. Lascialo vuoto per disabilitarlo.";

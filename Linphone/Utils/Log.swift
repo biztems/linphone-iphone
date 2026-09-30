@@ -99,11 +99,8 @@ class Log: LoggingServiceDelegate {
 		} else {
 			NSLog(log)
 		}
-#if USE_CRASHLYTICS
-		if FirebaseApp.app() != nil {
-			Crashlytics.crashlytics().log(log)
-		}
-#endif
+		// BizVoIP: crash reports only; the app's logs carry phone numbers and SIP addresses, so they stay on
+		// the phone instead of travelling to Crashlytics with each report
 	}
 		
 	func onLogMessageWritten(logService: LoggingService, domain: String, level: LogLevel, message: String) {

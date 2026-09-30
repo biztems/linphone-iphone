@@ -87,21 +87,24 @@ struct DebugFragment: View {
 								
 								Spacer()
 								
-								Button(
-									action: {
-										helpViewModel.shareLogs()
-									}, label: {
-										Text("help_troubleshooting_share_logs")
-											.default_text_style_orange_500(styleSize: 14)
-											.lineLimit(1)
-									}
-								)
-								.padding(.horizontal, 15)
-								.padding(.vertical, 10)
-								.background(Color.orangeMain100)
-								.cornerRadius(60)
-								
-								Spacer()
+								// BizVoIP: only with a logs sharing server, and there is none by default
+								if helpViewModel.uploadLogsAvailable {
+									Button(
+										action: {
+											helpViewModel.shareLogs()
+										}, label: {
+											Text("help_troubleshooting_share_logs")
+												.default_text_style_orange_500(styleSize: 14)
+												.lineLimit(1)
+										}
+									)
+									.padding(.horizontal, 15)
+									.padding(.vertical, 10)
+									.background(Color.orangeMain100)
+									.cornerRadius(60)
+									
+									Spacer()
+								}
 							}
 							
 							Button {
