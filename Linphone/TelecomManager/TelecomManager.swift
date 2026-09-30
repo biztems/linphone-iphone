@@ -97,9 +97,35 @@ class TelecomManager: ObservableObject {
 		}
 	}
 	
+	// BizVoIP: the emergency numbers the app never dials itself: 112 and the Italian numbers it answers for,
+	// the coast guard, and 911 and 999 for anyone used to them. Extensions must never take one
+	// (pbx/generate.py refuses them).
+	static let emergencyNumbers: Set<String> = ["112", "113", "115", "118", "1530", "911", "999"]
+
+	static func emergencyNumber(_ username: String?) -> String? {
+		var national = String((username ?? "").filter { ($0.isASCII && $0.isNumber) || $0 == "+" })
+		for prefix in ["+39", "0039"] where national.hasPrefix(prefix) {
+			national = String(national.dropFirst(prefix.count))
+		}
+		return emergencyNumbers.contains(national) ? national : nil
+	}
+
 	func startCallCallKit(core: Core, addr: Address?, isSas: Bool, isVideo: Bool, isConference: Bool = false) throws {
 		if addr == nil {
 			Log.info("Can not start a call with null address!")
+			return
+		}
+
+		// BizVoIP: an emergency number goes to the phone's own dialer, never over SIP. The mobile network routes
+		// it to the emergency centre where the phone is, and the handset sends its location; a call through the
+		// PBX can do neither. iOS asks the user to confirm, then calls over the cellular network.
+		if let emergency = TelecomManager.emergencyNumber(addr?.username) {
+			Log.warn("[TelecomManager] \(emergency) is an emergency number, handing it to the phone's dialer")
+			DispatchQueue.main.async {
+				if let url = URL(string: "tel://\(emergency)") {
+					UIApplication.shared.open(url)
+				}
+			}
 			return
 		}
 
