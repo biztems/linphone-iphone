@@ -623,18 +623,13 @@ struct AccountProfileFragment: View {
 				}
 				
 				if self.isShowLogoutPopup {
-					let localizedString = NSLocalizedString("manage_account_dialog_remove_account_message", comment: "")
-					
-					let components = localizedString.components(separatedBy: " ")
-					let textPart = components.dropLast().joined(separator: " ")
-					
-					let contentPopup1 = Text(textPart + " ")
-					let contentPopup2 = Text("[https://sip.linphone.org](https://sip.linphone.org)").underline()
+					// BizVoIP: say what removing does; the account itself is closed by Biztems
+					let contentPopup = Text(NSLocalizedString("manage_account_dialog_remove_account_message", comment: ""))
 					
 					PopupView(
 						isShowPopup: $isShowLogoutPopup,
 						title: Text("manage_account_dialog_remove_account_title"),
-						content: contentPopup1 + contentPopup2,
+						content: contentPopup,
 						titleFirstButton: nil,
 						actionFirstButton: {},
 						titleSecondButton: Text("manage_account_delete"),

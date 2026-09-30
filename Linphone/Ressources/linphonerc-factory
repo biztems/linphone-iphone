@@ -54,8 +54,9 @@ disable_meetings_feature=1
 disable_linphone_accounts=1
 
 [assistant]
-# biztems: pre-filled in the manual SIP account form
-default_domain=mobile.biztems.it
+# biztems: pre-filled in the manual SIP account form. The domain is the tenant's (<tenant>.voip.biztems.it),
+# typed by the user; every account goes through Flexisip for push.
+default_domain=
 default_proxy=mobile.biztems.it:5065
 
 [lime]

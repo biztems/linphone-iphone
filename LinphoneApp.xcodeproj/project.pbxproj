@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DE1516BBDB2D121FB3A2A29 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5D482E3DFA2C5499AE591849 /* PrivacyInfo.xcprivacy */; };
+		1644462CDCEC4D539060C86E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DA18F2EAECFFE0F1BA583F9E /* PrivacyInfo.xcprivacy */; };
 		B12E4A5DDF54BE584EC9F11B /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B12E2A94DF5E81534BEEACCC /* InfoPlist.xcstrings */; };
 		660AAF7F2B839272004C0FA6 /* msgNotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 660AAF7B2B839271004C0FA6 /* msgNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		660D8A712B517D260092694D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 660D8A702B517D260092694D /* GoogleService-Info.plist */; };
@@ -119,7 +121,6 @@
 		D737AEEF2DA011F2005C1280 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D737AEED2DA011F2005C1280 /* Localizable.strings */; };
 		D738ACEE2E857BF10039F7D1 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738ACED2E857BEF0039F7D1 /* KeyboardResponder.swift */; };
 		D73DD7D02EE184B200654313 /* RecordingsListBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73DD7CF2EE184A500654313 /* RecordingsListBottomSheet.swift */; };
-		D7458F392E0BDCF4000C957A /* linphoneExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D7458F2F2E0BDCF4000C957A /* linphoneExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D7479CE92FAA3C2A008EF474 /* BottomSheetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7479CE82FAA3C1F008EF474 /* BottomSheetContent.swift */; };
 		D748BF2C2ACD82D2004844EB /* ThirdPartySipAccountLoginFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748BF2B2ACD82D2004844EB /* ThirdPartySipAccountLoginFragment.swift */; };
 		D748BF2E2ACD82E7004844EB /* ThirdPartySipAccountWarningFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D748BF2D2ACD82E7004844EB /* ThirdPartySipAccountWarningFragment.swift */; };
@@ -256,13 +257,6 @@
 			remoteGlobalIDString = D719ABB22ABC67BF00B41C10;
 			remoteInfo = LinphoneApp;
 		};
-		D7458F372E0BDCF4000C957A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D719ABAB2ABC67BF00B41C10 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D7458F2E2E0BDCF4000C957A;
-			remoteInfo = linphoneExtension;
-		};
 		D792F15F2F02BCC2002E3225 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D719ABAB2ABC67BF00B41C10 /* Project object */;
@@ -281,7 +275,6 @@
 			files = (
 				660AAF7F2B839272004C0FA6 /* msgNotificationService.appex in Embed Foundation Extensions */,
 				D792F1612F02BCC2002E3225 /* intentsExtension.appex in Embed Foundation Extensions */,
-				D7458F392E0BDCF4000C957A /* linphoneExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +282,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D482E3DFA2C5499AE591849 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		DA18F2EAECFFE0F1BA583F9E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		B12E2A94DF5E81534BEEACCC /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		660AAF7B2B839271004C0FA6 /* msgNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = msgNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		660AAF842B8392E0004C0FA6 /* msgNotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = msgNotificationService.entitlements; sourceTree = "<group>"; };
@@ -624,6 +619,7 @@
 			isa = PBXGroup;
 			children = (
 				667E5D802B8E444D00EBCFC4 /* GoogleService-Info.plist */,
+				5D482E3DFA2C5499AE591849 /* PrivacyInfo.xcprivacy */,
 				6691CA7D2B839C2D00B2A7B8 /* NotificationService.swift */,
 				660AAF842B8392E0004C0FA6 /* msgNotificationService.entitlements */,
 			);
@@ -1125,6 +1121,7 @@
 				D783C77B2B1089B200622CC2 /* assistant_third_party_default_values */,
 				D732A90A2B0376F500DB42BA /* linphonerc-default */,
 				D732A90B2B0376F500DB42BA /* linphonerc-factory */,
+				DA18F2EAECFFE0F1BA583F9E /* PrivacyInfo.xcprivacy */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -1368,7 +1365,6 @@
 			);
 			dependencies = (
 				660AAF7E2B839272004C0FA6 /* PBXTargetDependency */,
-				D7458F382E0BDCF4000C957A /* PBXTargetDependency */,
 				D792F1602F02BCC2002E3225 /* PBXTargetDependency */,
 			);
 			name = LinphoneApp;
@@ -1507,6 +1503,7 @@
 				667E5D7F2B8E430C00EBCFC4 /* linphonerc-factory in Resources */,
 				D7E394C52DAC6561005FA0DD /* Localizable.strings in Resources */,
 				667E5D812B8E444E00EBCFC4 /* GoogleService-Info.plist in Resources */,
+				5DE1516BBDB2D121FB3A2A29 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1545,6 +1542,7 @@
 				D732A90C2B0376F500DB42BA /* linphonerc-default in Resources */,
 				D7D67B6A2F601F6100DD9976 /* AppIntentVocabulary.plist in Resources */,
 				D732A90D2B0376F500DB42BA /* linphonerc-factory in Resources */,
+				1644462CDCEC4D539060C86E /* PrivacyInfo.xcprivacy in Resources */,
 				D783C77C2B1089B200622CC2 /* assistant_linphone_default_values in Resources */,
 				660D8A712B517D260092694D /* GoogleService-Info.plist in Resources */,
 			);
@@ -1857,11 +1855,6 @@
 			target = D719ABB22ABC67BF00B41C10 /* LinphoneApp */;
 			targetProxy = C6E408B32F8E1A33003E0F8C /* PBXContainerItemProxy */;
 		};
-		D7458F382E0BDCF4000C957A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D7458F2E2E0BDCF4000C957A /* linphoneExtension */;
-			targetProxy = D7458F372E0BDCF4000C957A /* PBXContainerItemProxy */;
-		};
 		D792F1602F02BCC2002E3225 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D792F1572F02BCC2002E3225 /* intentsExtension */;
@@ -1932,7 +1925,7 @@
 				CODE_SIGN_ENTITLEMENTS = msgNotificationService/msgNotificationService.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9CLR8L799T;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -1953,7 +1946,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 6.2.3;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DUSE_CRASHLYTICS";
 				PRODUCT_BUNDLE_IDENTIFIER = it.biztems.phone.msgNotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1964,7 +1957,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1976,7 +1969,7 @@
 				CODE_SIGN_ENTITLEMENTS = msgNotificationService/msgNotificationService.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9CLR8L799T;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -1996,7 +1989,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 6.2.3;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DUSE_CRASHLYTICS";
 				PRODUCT_BUNDLE_IDENTIFIER = it.biztems.phone.msgNotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2005,7 +1998,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -2033,7 +2026,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = LinphoneApp;
 			};
 			name = Debug;
@@ -2060,7 +2053,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = LinphoneApp;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2090,7 +2083,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LinphoneApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LinphoneApp";
 			};
 			name = Debug;
@@ -2118,7 +2111,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LinphoneApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LinphoneApp";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2252,7 +2245,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Linphone/Linphone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Linphone/Preview Content\"";
@@ -2267,8 +2260,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Linphone/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
-				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = YES;
-				INFOPLIST_KEY_ITSEncryptionExportComplianceCode = "b5cb085f-772a-4a4f-8c77-5d1332b1f93f";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "BizVoIP adds your meetings to your calendar.";
 				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "BizVoIP adds your meetings to your calendar.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "BizVoIP uses the camera for video calls and to scan setup QR codes.";
@@ -2295,7 +2286,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 6.2.3;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DUSE_CRASHLYTICS";
 				PRODUCT_BUNDLE_IDENTIFIER = it.biztems.phone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2303,7 +2294,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2316,7 +2307,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Linphone/Linphone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Linphone/Preview Content\"";
 				DEVELOPMENT_TEAM = 9CLR8L799T;
@@ -2329,8 +2320,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Linphone/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BizVoIP;
-				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = YES;
-				INFOPLIST_KEY_ITSEncryptionExportComplianceCode = "b5cb085f-772a-4a4f-8c77-5d1332b1f93f";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "BizVoIP adds your meetings to your calendar.";
 				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "BizVoIP adds your meetings to your calendar.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "BizVoIP uses the camera for video calls and to scan setup QR codes.";
@@ -2357,7 +2346,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
-				MARKETING_VERSION = 6.2.3;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DUSE_CRASHLYTICS";
 				PRODUCT_BUNDLE_IDENTIFIER = it.biztems.phone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2365,7 +2354,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -2376,7 +2365,7 @@
 				CODE_SIGN_ENTITLEMENTS = linphoneExtension/linphoneExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9CLR8L799T;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -2391,7 +2380,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 6.2.3;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.biztems.phone.linphoneExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2399,7 +2388,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2410,7 +2399,7 @@
 				CODE_SIGN_ENTITLEMENTS = linphoneExtension/linphoneExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9CLR8L799T;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -2425,14 +2414,14 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 6.2.3;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.biztems.phone.linphoneExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -2443,7 +2432,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9CLR8L799T;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -2458,7 +2447,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 6.2.3;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.biztems.phone.intentsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2469,7 +2458,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2479,7 +2468,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9CLR8L799T;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -2494,7 +2483,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 6.2.3;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.biztems.phone.intentsExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2504,7 +2493,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

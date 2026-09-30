@@ -139,7 +139,7 @@
 "manage_account_device_last_connection" = "Останнє з'єднання:";
 "manage_account_device_remove" = "Видалити";
 "manage_account_devices_title" = "Пристрої";
-"manage_account_dialog_remove_account_message" = "Якщо ви хочете видалити свій обліковий запис назавжди, перейдіть за посиланням: https://sip.linphone.org";
+"manage_account_dialog_remove_account_message" = "This only removes the account from this phone. To close it, ask your administrator or Biztems.";
 "manage_account_dialog_remove_account_title" = "Вийти з облікового запису?";
 "manage_account_edit_picture" = "Редагувати зображення";
 "manage_account_international_prefix" = "Міжнародний префікс";

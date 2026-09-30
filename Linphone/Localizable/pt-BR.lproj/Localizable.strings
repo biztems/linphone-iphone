@@ -276,7 +276,7 @@
 "manage_account_device_last_connection" = "Última conexão:";
 "manage_account_device_remove" = "Remover";
 "manage_account_devices_title" = "Dispositivos";
-"manage_account_dialog_remove_account_message" = "Se você deseja excluir sua conta permanentemente, acesse: https://sip.linphone.org";
+"manage_account_dialog_remove_account_message" = "This only removes the account from this phone. To close it, ask your administrator or Biztems.";
 "manage_account_dialog_remove_account_title" = "Sair da sua conta?";
 "manage_account_edit_picture" = "Editar foto";
 "manage_account_international_prefix" = "Prefixo internacional";

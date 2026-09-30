@@ -241,7 +241,7 @@
 "manage_account_device_last_connection" = "Letzte Verbindung:";
 "manage_account_device_remove" = "Entfernen";
 "manage_account_devices_title" = "Geräte";
-"manage_account_dialog_remove_account_message" = "Wenn Sie Ihr Konto dauerhaft löschen möchten, gehen Sie zu: https://sip.linphone.org";
+"manage_account_dialog_remove_account_message" = "This only removes the account from this phone. To close it, ask your administrator or Biztems.";
 "manage_account_dialog_remove_account_title" = "Von Ihrem Konto abmelden?";
 "manage_account_edit_picture" = "Bild bearbeiten";
 "manage_account_international_prefix" = "Internationale Vorwahl";

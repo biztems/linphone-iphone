@@ -48,7 +48,8 @@ class HelpViewModel: ObservableObject {
 			sdkGitBranch = String(sdkGitBranch.dropFirst("remotes/origin/".count))
 		}
 		
-		self.appVersion = appGitTag
+		// BizVoIP: the app's own version (1.0.0 and on), not the git tag, which is upstream's (6.2.3)
+		self.appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? appGitTag
 		self.version = appGitTag + "-" + appGitVersion + "\n(\(appGitBranch))"
 		
 		self.sdkVersion = sdkGitVersion + "\n(\(sdkGitBranch))"
@@ -60,6 +61,10 @@ class HelpViewModel: ObservableObject {
 		}
 		
 		CoreContext.shared.doOnCoreQueue { core in
+			let uploadAvailable = !(core.logCollectionUploadServerUrl ?? "").isEmpty
+			DispatchQueue.main.async {
+				self.uploadLogsAvailable = uploadAvailable
+			}
 			self.coreDelegate = CoreDelegateStub(
 				onLogCollectionUploadStateChanged: {(
 							core: Core,

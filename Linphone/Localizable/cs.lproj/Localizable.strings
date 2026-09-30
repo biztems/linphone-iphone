@@ -203,7 +203,7 @@
 "help_troubleshooting_clear_native_friends_in_database" = "Smazat importované kontakty z adresáře zařízení";
 "help_troubleshooting_debug_logs_cleaned_toast_message" = "Ladící logy byly vyčištěny";
 "help_troubleshooting_debug_logs_upload_error_toast_message" = "Chyba při nahrávání ladících logů";
-"manage_account_dialog_remove_account_message" = "Pokud si přejete nevratně smazat svůj účet, navštivte: https://sip.linphone.org";
+"manage_account_dialog_remove_account_message" = "This only removes the account from this phone. To close it, ask your administrator or Biztems.";
 "manage_account_dialog_remove_account_title" = "Odhlásit se z účtu?";
 "history_call_start_search_bar_filter_hint" = "Hledat kontakt nebo historii hovorů";
 "history_dialog_delete_all_call_logs_message" = "Z historie bodou odstraněny všechny hovory";
