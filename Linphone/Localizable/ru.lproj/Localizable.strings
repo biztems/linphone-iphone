@@ -392,13 +392,13 @@
 "assistant_dialog_confirm_phone_number_message" = "Вы уверены что хотите использовать телефонный номер %@?";
 "assistant_forgotten_password" = "Забыли пароль?";
 "assistant_invalid_uri_toast" = "Неверный URI";
-"assistant_permissions_read_contacts_title" = "**Доступ к контактам:** Чтобы отображать ваши контакты и находить тех, кто использует %@.";
+"assistant_permissions_read_contacts_title" = "**Доступ к контактам:** Чтобы отображать ваши контакты и имя звонящего.";
 ": %@" = ": %@";
 "[https://sip.linphone.org](https://sip.linphone.org)" = "[https://sip.linphone.org](https://sip.linphone.org)";
 "4" = "4";
 "account_settings_dialog_invalid_password_message" = "Не удалось подключиться, поскольку данные авторизации отсутствуют или неверны для аккаунта\n%@.\n\nВы можете ввести пароль снова или проверить настройки аккаунта.";
 "assistant_dialog_general_terms_and_privacy_policy_message" = "Продолжая, вы принимаете наше %@ и %@.";
-"assistant_permissions_access_camera_title" = "**Доступ к камере:** Для видеозвонков и видеоконференций.";
+"assistant_permissions_access_camera_title" = "**Доступ к камере:** Чтобы сканировать QR-код для настройки учётной записи.";
 "contact_details_trust_title" = "Доверять";
 "conversation_menu_search_in_messages" = "Найти";
 "account_settings_apply_international_prefix_title" = "Формат телефонных номеров с использованием международного префикса";

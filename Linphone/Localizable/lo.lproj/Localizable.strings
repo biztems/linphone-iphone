@@ -83,11 +83,11 @@
 "assistant_invalid_uri_toast" = "URI ບໍ່ຖືກຕ້ອງ";
 "assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_no_account_yet" = "ຍັງບໍ່ມີບັນຊີບໍ?";
-"assistant_permissions_access_camera_title" = "**ເຂົ້າເຖິງກ້ອງ:** ເພື່ອໃຊ້ວິດີໂອລະຫວ່າງການໂທວິດີໂອ ແລະ ການປະຊຸມ.";
+"assistant_permissions_access_camera_title" = "**Access camera:** To scan the QR code that sets up your account.";
 "assistant_permissions_grant_all_of_them" = "ຕົກລົງ";
-"assistant_permissions_post_notifications_title" = "**ການແຈ້ງເຕືອນ:** ເພື່ອແຈ້ງໃຫ້ເຈົ້າຮູ້ເມື່ອມີຂໍ້ຄວາມ ຫຼື ສາຍຮຽກເຂົ້າ.";
-"assistant_permissions_read_contacts_title" = "**ອ່ານລາຍຊື່ຜູ້ຕິດຕໍ່:** ເພື່ອສະແດງລາຍຊື່ ແລະ ເບິ່ງວ່າໃຜແດ່ທີ່ໃຊ້ %@.";
-"assistant_permissions_record_audio_title" = "**ບັນທຶກສຽງ:** ເພື່ອໃຫ້ຜູ້ທີ່ເຈົ້າລົມນຳໄດ້ຍິນສຽງ ແລະ ເພື່ອບັນທຶກຂໍ້ຄວາມສຽງ.";
+"assistant_permissions_post_notifications_title" = "**Post notifications:** To let you know when a call comes in.";
+"assistant_permissions_read_contacts_title" = "**Read contacts:** To show your contacts and the name of whoever is calling you.";
+"assistant_permissions_record_audio_title" = "**Record audio:** So the person you are talking to can hear you.";
 "assistant_permissions_skip_permissions" = "ໄວ້ເຮັດພາຍຫຼັງ";
 "assistant_permissions_subtitle" = "ເພື່ອການໃຊ້ງານ %@ ຢ່າງເຕັມຮູບແບບ, ພວກເຮົາຕ້ອງການໃຫ້ເຈົ້າອະນຸຍາດສິດດັ່ງນີ້:";
 "assistant_permissions_title" = "ອະນຸຍາດສິດການເຂົ້າເຖິງ";
