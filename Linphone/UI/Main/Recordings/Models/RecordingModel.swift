@@ -137,30 +137,19 @@ class RecordingModel: ObservableObject {
         FileUtil.delete(path: filePath)
 	}
 	
+	// BizVoIP: upstream used English word order and a 12-hour clock for every language but French
+	// ("Mercoledì, Ottobre 1 - 2:40 PM"); the template lets the user's language order the day and the month,
+	// and the time follows their clock.
 	func formattedDateTime(timestamp: Int64) -> String {
-		let locale = Locale.current
 		let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
 
 		let dateFormatter = DateFormatter()
-		dateFormatter.locale = locale
-		
-		if Calendar.current.isDate(date, equalTo: .now, toGranularity: .year) {
-			dateFormatter.dateFormat = locale.identifier == "fr_FR"
-			 ? "EEEE d MMMM"
-			 : "EEEE, MMMM d"
-		} else {
-			dateFormatter.dateFormat = locale.identifier == "fr_FR"
-			 ? "EEEE d MMMM yyyy"
-			 : "EEEE, MMMM d, yyyy"
-		}
+		dateFormatter.setLocalizedDateFormatFromTemplate(
+			Calendar.current.isDate(date, equalTo: .now, toGranularity: .year) ? "EEEEdMMMM" : "EEEEdMMMMyyyy")
+		let day = dateFormatter.string(from: date)
+		let time = DateFormatter.localizedString(from: date, dateStyle: .none, timeStyle: .short)
 
-		let timeFormatter = DateFormatter()
-		timeFormatter.locale = locale
-		timeFormatter.dateFormat = locale.identifier == "fr_FR"
-			? "HH:mm"
-			: "h:mm a"
-
-		return "\(dateFormatter.string(from: date).capitalized) - \(timeFormatter.string(from: date))"
+		return "\(day.prefix(1).uppercased() + day.dropFirst()) - \(time)"
 	}
 	
 	func formattedMonthYear(timestamp: Int64) -> String {

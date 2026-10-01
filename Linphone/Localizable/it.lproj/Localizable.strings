@@ -517,10 +517,10 @@
 "assistant_scan_qr_code" = "Scansiona il codice QR";
 "assistant_qr_code_invalid_toast" = "Codice QR non valido.";
 "assistant_permissions_grant_all_of_them" = "OK";
-"assistant_permissions_access_camera_title" = "**Accesso alla fotocamera:** per riprendere il video durante videochiamate e conferenze.";
-"assistant_permissions_post_notifications_title" = "**Invio notifiche:** per avvisarti quando arriva un messaggio o una chiamata.";
-"assistant_permissions_read_contacts_title" = "**Lettura contatti:** per mostrare la rubrica e vedere chi usa %@.";
-"assistant_permissions_record_audio_title" = "**Registrazione audio:** per farti sentire dall'interlocutore e registrare messaggi vocali.";
+"assistant_permissions_access_camera_title" = "**Accesso alla fotocamera:** per inquadrare il codice QR che configura il tuo account.";
+"assistant_permissions_post_notifications_title" = "**Invio notifiche:** per avvisarti quando arriva una chiamata.";
+"assistant_permissions_read_contacts_title" = "**Lettura contatti:** per mostrare la rubrica e il nome di chi ti chiama.";
+"assistant_permissions_record_audio_title" = "**Registrazione audio:** per farti sentire dall'interlocutore.";
 "assistant_permissions_subtitle" = "Per sfruttare %@ al meglio servono le autorizzazioni seguenti:";
 "assistant_third_party_sip_account_create_linphone_account" = "Preferisco creare un account";
 "assistant_third_party_sip_account_warning_explanation" = "Alcune funzioni richiedono un account %@, come i messaggi di gruppo o le videoconferenze…\n\nQueste funzioni non sono disponibili se accedi con un account SIP di terze parti.\n\nPer abilitarle in un progetto commerciale, contattaci.";

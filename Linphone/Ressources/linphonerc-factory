@@ -29,6 +29,9 @@ disable_ringing=0
 [audio]
 
 [video]
+# BizVoIP: audio only. The PBX carries no video, and with video off the video-call buttons are hidden.
+capture=0
+display=0
 auto_resize_preview_to_keep_ratio=1
 max_conference_size=vga
 

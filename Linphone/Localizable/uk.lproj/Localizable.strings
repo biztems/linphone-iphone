@@ -333,9 +333,9 @@
 "assistant_forgotten_password" = "Забули пароль?";
 "assistant_invalid_uri_toast" = "Невірний URI";
 "assistant_no_account_yet" = "Ще немає облікового запису?";
-"assistant_permissions_access_camera_title" = "**Доступ до камери:** Для запису відео під час відеодзвінків та конференцій.";
+"assistant_permissions_access_camera_title" = "**Доступ до камери:** Щоб сканувати QR-код, який налаштовує ваш обліковий запис.";
 "assistant_permissions_grant_all_of_them" = "ОК";
-"assistant_permissions_read_contacts_title" = "**Читати контакти:** Для відображення своїх контактів та знайти тих, хто користується %@.";
+"assistant_permissions_read_contacts_title" = "**Читати контакти:** Для відображення ваших контактів та імені того, хто телефонує.";
 "assistant_permissions_skip_permissions" = "Зробіть це пізніше";
 "assistant_permissions_subtitle" = "Щоб повною мірою користуватися %@, вам потрібно надати застосунку наступні дозволи:";
 "assistant_permissions_title" = "Надати дозволи";
@@ -399,11 +399,11 @@
 "conversation_ephemeral_messages_duration_disabled" = "Вимкнено";
 "assistant_account_login" = "Логін";
 "sip_address_display_name" = "Ім'я для відображення";
-"assistant_permissions_record_audio_title" = "**Запис аудіо:** Щоб ваш співрозмовник міг вас чути та записувати голосові повідомлення.";
+"assistant_permissions_record_audio_title" = "**Запис аудіо:** Щоб ваш співрозмовник міг вас чути.";
 "assistant_third_party_sip_account_warning_ok" = "Я розумію";
 "account_settings_sip_proxy_url_title" = "URL-адреса проксі-сервера SIP";
 "assistant_account_register_push_notification_not_received_error" = "Push-сповіщення з токеном авторизації не отримано упродовж 5 секунд, спробуйте пізніше";
-"assistant_permissions_post_notifications_title" = "**Сповіщення про публікації:** Щоб бути в курсі отримання повідомлення або дзвінка.";
+"assistant_permissions_post_notifications_title" = "**Сповіщення:** Щоб повідомляти вас про вхідні дзвінки.";
 "call_dialog_zrtp_security_alert_message" = "Конфіденційність цього дзвінка може бути скомпрометована!";
 "account_settings_im_encryption_mandatory_title" = "Обов'язкове шифрування миттєвих повідомлень";
 "call_dialog_zrtp_validate_trust_message" = "Для вашої безпеки нам потрібно автентифікувати пристрій вашого співрозмовника. Будь ласка, обміняйтеся кодами:";

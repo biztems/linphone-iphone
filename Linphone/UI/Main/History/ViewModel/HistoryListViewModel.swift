@@ -148,28 +148,23 @@ class HistoryListViewModel: ObservableObject {
 		}
 	}
 	
+	// BizVoIP: upstream wrote "Today" and "Yesterday" in English and used day/month and 24 hours only for
+	// fr_FR, so Italian users read "Today | 2:40 PM" and older calls month first. The day and the time now
+	// follow the user's language and clock: "Oggi | 14:40", "1 ott | 14:40", "1 ott 2025 | 14:40".
 	func getCallTime(startDate: time_t) -> String {
-		let timeInterval = TimeInterval(startDate)
-		
-		let myNSDate = Date(timeIntervalSince1970: timeInterval)
-		
-		if Calendar.current.isDateInToday(myNSDate) {
-			let formatter = DateFormatter()
-			formatter.dateFormat = Locale.current.identifier == "fr_FR" ? "HH:mm" : "h:mm a"
-			return "Today | " + formatter.string(from: myNSDate)
-		} else if Calendar.current.isDateInYesterday(myNSDate) {
-			let formatter = DateFormatter()
-			formatter.dateFormat = Locale.current.identifier == "fr_FR" ? "HH:mm" : "h:mm a"
-			return "Yesterday | " + formatter.string(from: myNSDate)
-		} else if Calendar.current.isDate(myNSDate, equalTo: .now, toGranularity: .year) {
-			let formatter = DateFormatter()
-			formatter.dateFormat = Locale.current.identifier == "fr_FR" ? "dd/MM | HH:mm" : "MM/dd | h:mm a"
-			return formatter.string(from: myNSDate)
+		let date = Date(timeIntervalSince1970: TimeInterval(startDate))
+		let calendar = Calendar.current
+		let dayFormatter = DateFormatter()
+		if calendar.isDateInToday(date) || calendar.isDateInYesterday(date) {
+			dayFormatter.dateStyle = .medium
+			dayFormatter.doesRelativeDateFormatting = true
 		} else {
-			let formatter = DateFormatter()
-			formatter.dateFormat = Locale.current.identifier == "fr_FR" ? "dd/MM/yy | HH:mm" : "MM/dd/yy | h:mm a"
-			return formatter.string(from: myNSDate)
+			dayFormatter.setLocalizedDateFormatFromTemplate(
+				calendar.isDate(date, equalTo: .now, toGranularity: .year) ? "dMMM" : "dMMMyyyy")
 		}
+		let day = dayFormatter.string(from: date)
+		let time = DateFormatter.localizedString(from: date, dateStyle: .none, timeStyle: .short)
+		return day.prefix(1).uppercased() + day.dropFirst() + " | " + time
 	}
 	
 	func filterCallLogs(filter: String) {

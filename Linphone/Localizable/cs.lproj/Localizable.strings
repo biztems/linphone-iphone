@@ -390,12 +390,12 @@
 "assistant_dialog_confirm_phone_number_message" = "Jste si jistý(á), že chcete použít telefonní číslo %@?";
 "assistant_forgotten_password" = "Zapomenuté nebo neznámé heslo?";
 "assistant_invalid_uri_toast" = "Neplatná URI";
-"assistant_permissions_access_camera_title" = "**Přístup ke kameře:** Pro zachycení videa během videohovorů a konferencí.";
-"assistant_permissions_read_contacts_title" = "**Čtení kontaktů:** Pro zobrazení vašich kontaktů a zjištění, kdo používá %@.";
+"assistant_permissions_access_camera_title" = "**Přístup ke kameře:** Pro naskenování QR kódu, který nastaví váš účet.";
+"assistant_permissions_read_contacts_title" = "**Čtení kontaktů:** Pro zobrazení vašich kontaktů a jména volajícího.";
 "assistant_permissions_subtitle" = "Pro plné využívání %@ potřebujeme, abyste nám udělili následující oprávnění:";
 "assistant_third_party_sip_account_create_linphone_account" = "Preferuji vytvoření účtu";
-"assistant_permissions_post_notifications_title" = "**Odesílání notifikací:** Abyste byli informováni, když obdržíte zprávu nebo hovor.";
-"assistant_permissions_record_audio_title" = "**Nahrávání zvuku:** Aby Vás váš protějšek slyšel a pro nahrávání hlasových zpráv.";
+"assistant_permissions_post_notifications_title" = "**Odesílání notifikací:** Abyste byli informováni o příchozím hovoru.";
+"assistant_permissions_record_audio_title" = "**Nahrávání zvuku:** Aby vás váš protějšek slyšel.";
 "assistant_third_party_sip_account_warning_explanation" = "Některé funkce jako skupinové zprávy nebo videokonference vyžadují účet %@...\n\nTyto funkce jsou skryté, pokud se zaregistrujete pomocí SIP účtu třetí strany.\n\nPro aktivaci v komerčním projektu nás prosím kontaktujte.";
 "assistant_web_platform_link" = "subscribe.linphone.org";
 "call_action_attended_transfer" = "Přepojení s účastí";

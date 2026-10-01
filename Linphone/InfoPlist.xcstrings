@@ -7,97 +7,97 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "BizVoIP uses the camera for video calls and to scan setup QR codes."
+            "value": "BizVoIP uses the camera to scan setup QR codes."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP usa la fotocamera per le videochiamate e per scansionare i codici QR di configurazione."
+            "value": "BizVoIP usa la fotocamera per scansionare i codici QR di configurazione."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP utilise l’appareil photo pour les appels vidéo et pour scanner les codes QR de configuration."
+            "value": "BizVoIP utilise l’appareil photo pour scanner les codes QR de configuration."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP verwendet die Kamera für Videoanrufe und zum Scannen von Einrichtungs-QR-Codes."
+            "value": "BizVoIP verwendet die Kamera zum Scannen von Einrichtungs-QR-Codes."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP usa la cámara para las videollamadas y para escanear códigos QR de configuración."
+            "value": "BizVoIP usa la cámara para escanear códigos QR de configuración."
           }
         },
         "pt": {
           "stringUnit": {
             "state": "translated",
-            "value": "O BizVoIP utiliza a câmara para videochamadas e para ler códigos QR de configuração."
+            "value": "O BizVoIP utiliza a câmara para ler códigos QR de configuração."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O BizVoIP usa a câmera para chamadas de vídeo e para ler códigos QR de configuração."
+            "value": "O BizVoIP usa a câmera para ler códigos QR de configuração."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP gebruikt de camera voor videogesprekken en om QR-codes voor de configuratie te scannen."
+            "value": "BizVoIP gebruikt de camera om QR-codes voor de configuratie te scannen."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP fa servir la càmera per a les videotrucades i per escanejar codis QR de configuració."
+            "value": "BizVoIP fa servir la càmera per escanejar codis QR de configuració."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP používá fotoaparát pro videohovory a ke skenování konfiguračních QR kódů."
+            "value": "BizVoIP používá fotoaparát ke skenování konfiguračních QR kódů."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP používa fotoaparát na videohovory a na skenovanie konfiguračných QR kódov."
+            "value": "BizVoIP používa fotoaparát na skenovanie konfiguračných QR kódov."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP использует камеру для видеозвонков и сканирования QR-кодов настройки."
+            "value": "BizVoIP использует камеру для сканирования QR-кодов настройки."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP використовує камеру для відеодзвінків і сканування QR-кодів налаштування."
+            "value": "BizVoIP використовує камеру для сканування QR-кодів налаштування."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP 使用相机进行视频通话和扫描设置二维码。"
+            "value": "BizVoIP 使用相机扫描设置二维码。"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP käyttää kameraa videopuheluihin ja asetusten QR-koodien skannaamiseen."
+            "value": "BizVoIP käyttää kameraa asetusten QR-koodien skannaamiseen."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A BizVoIP a kamerát videohívásokhoz és a beállítási QR-kódok beolvasásához használja."
+            "value": "A BizVoIP a kamerát a beállítási QR-kódok beolvasásához használja."
           }
         }
       }

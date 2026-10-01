@@ -87,11 +87,11 @@
 "assistant_invalid_uri_toast" = "Invalid URI";
 "assistant_login_third_party_sip_account" = "Enter account details";
 "assistant_no_account_yet" = "No account yet?";
-"assistant_permissions_access_camera_title" = "**Access camera:** To capture video during video calls and conferences.";
+"assistant_permissions_access_camera_title" = "**Access camera:** To scan the QR code that sets up your account.";
 "assistant_permissions_grant_all_of_them" = "OK";
-"assistant_permissions_post_notifications_title" = "**Post notifications:** To be informed when you receive a message or a call.";
-"assistant_permissions_read_contacts_title" = "**Read contacts:** To display your contacts and find whom is using %@.";
-"assistant_permissions_record_audio_title" = "**Record audio:** So your correspondent can hear you and to record voice messages.";
+"assistant_permissions_post_notifications_title" = "**Post notifications:** To let you know when a call comes in.";
+"assistant_permissions_read_contacts_title" = "**Read contacts:** To show your contacts and the name of whoever is calling you.";
+"assistant_permissions_record_audio_title" = "**Record audio:** So the person you are talking to can hear you.";
 "assistant_permissions_skip_permissions" = "Do it later";
 "assistant_permissions_subtitle" = "To fully enjoy %@ we need you to grant us the following permissions :";
 "assistant_permissions_title" = "Grant permissions";
