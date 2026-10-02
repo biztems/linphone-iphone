@@ -414,7 +414,7 @@
 "manage_account_remove_picture" = "Remove picture";
 "manage_account_settings" = "Account settings";
 "manage_account_status_cleared_summary" = "Account has been disabled, you won't receive any call or message.";
-"manage_account_status_connected_summary" = "This account in online, everybody can call you.";
+"manage_account_status_connected_summary" = "This account is online, everybody can call you.";
 "manage_account_status_failed_summary" = "Account connection failed, check your settings.";
 "manage_account_status_progress_summary" = "Account is connecting to the server, please wait…";
 "manage_account_title" = "Manage account";
