@@ -33,30 +33,65 @@ class AccountLoginViewModel: ObservableObject {
 	@Published var sipProxyUrl: String = AppServices.corePreferences.assistantDefaultProxy
 	@Published var outboundProxy: String = AppServices.corePreferences.assistantDefaultProxy
 	
+	// BizVoIP: the manual sign-in form shows a spinner while an attempt runs and says why one failed. It used
+	// to show nothing, and to empty the domain as soon as an attempt was sent, so after a failed one Login
+	// stayed disabled: App Review's "tapping on Login did not produce any action" (1.0.1 (3)).
+	@Published var isLoggingIn = false
+	@Published var loginError: String?
+	private var loginAttempt = 0
+	
 	private var mCoreDelegate: CoreDelegate!
 	
 	init() {}
 	
 	func login() {
+		// BizVoIP: what was typed or pasted, without the spaces and line breaks that come with it; a username
+		// written as 201@azienda.voip.biztems.it brings its domain.
+		var username = self.username.trimmingCharacters(in: .whitespacesAndNewlines)
+		var domain = self.domain.trimmingCharacters(in: .whitespacesAndNewlines)
+		let passwd = self.passwd.trimmingCharacters(in: .whitespacesAndNewlines)
+		let usernameWithDomain = username.split(separator: "@", maxSplits: 1)
+		if usernameWithDomain.count == 2 {
+			username = String(usernameWithDomain[0])
+			domain = String(usernameWithDomain[1])
+		}
+		self.username = username
+		self.domain = domain
+		guard !username.isEmpty, !passwd.isEmpty, !domain.isEmpty else {
+			loginError = String(localized: "assistant_login_error_missing_fields")
+			return
+		}
+		let authId = self.authId.trimmingCharacters(in: .whitespacesAndNewlines)
+		let sipProxyUrl = self.sipProxyUrl.trimmingCharacters(in: .whitespacesAndNewlines)
+		let outboundProxy = self.outboundProxy.trimmingCharacters(in: .whitespacesAndNewlines)
+		let transportType = self.transportType
+		
+		loginError = nil
+		isLoggingIn = true
+		if coreContext.accounts.isEmpty {  // a first account; "Add an account" opens the form over the main screens
+			SharedMainViewModel.shared.manualSignInPending = true
+		}
+		loginAttempt += 1
+		let attempt = loginAttempt
+		// A registration that never ends (no answer at all) still gives the form back.
+		DispatchQueue.main.asyncAfter(deadline: .now() + 40) {
+			guard self.loginAttempt == attempt, self.isLoggingIn else { return }
+			self.isLoggingIn = false
+			self.loginError = String(localized: "assistant_login_error_unreachable")
+		}
+		
 		coreContext.doOnCoreQueue { core in
 			guard self.coreContext.networkStatusIsConnected else {
 				DispatchQueue.main.async {
 					self.coreContext.loggingInProgress = false
+					self.isLoggingIn = false
+					self.loginError = String(localized: "assistant_login_error_unreachable")
 					ToastViewModel.shared.show("Unavailable_network")
 				}
 				return
 			}
 			do {
-				let usernameWithDomain = self.username.split(separator: "@")
-				
-				if usernameWithDomain.count > 1 {
-					DispatchQueue.main.async {
-						self.domain = String(usernameWithDomain.last ?? "")
-						self.username = String(usernameWithDomain.first ?? "")
-					}
-				}
-				
-				if self.domain != "sip.linphone.org" {
+				if domain != "sip.linphone.org" {
 					if let assistantLinphone = Bundle.main.path(forResource: "assistant_third_party_default_values", ofType: nil) {
 						core.loadConfigFromXml(xmlUri: assistantLinphone)
 					}
@@ -70,9 +105,9 @@ class AccountLoginViewModel: ObservableObject {
 				// TLS is strongly recommended
 				// Only use UDP if you don't have the choice
 				var transport: TransportType
-				if self.transportType == "TLS" {
+				if transportType == "TLS" {
 					transport = TransportType.Tls
-				} else if self.transportType == "TCP" {
+				} else if transportType == "TCP" {
 					transport = TransportType.Tcp
 				} else { transport = TransportType.Udp }
 				
@@ -84,12 +119,12 @@ class AccountLoginViewModel: ObservableObject {
 				// ha1 is set to null as we are using the clear text password. Upon first register, the hash will be computed automatically.
 				// The realm will be determined automatically from the first register, as well as the algorithm
 				let authInfo = try Factory.Instance.createAuthInfo(
-					username: self.username,
-					userid: self.authId,
-					passwd: self.passwd,
+					username: username,
+					userid: authId,
+					passwd: passwd,
 					ha1: "",
 					realm: "",
-					domain: self.domain
+					domain: domain
 				)
 				
 				// Account object replaces deprecated ProxyConfig object
@@ -98,16 +133,16 @@ class AccountLoginViewModel: ObservableObject {
 				let accountParams = try core.createAccountParams()
 				
 				// A SIP account is identified by an identity address that we can construct from the username and domain
-				let identity = try Factory.Instance.createAddress(addr: String("sip:" + self.username + "@" + self.domain))
+				let identity = try Factory.Instance.createAddress(addr: String("sip:" + username + "@" + domain))
 				try accountParams.setIdentityaddress(newValue: identity)
 				
 				// We also need to configure where the proxy server is located
 				var serverAddress: Address
-				if (!self.sipProxyUrl.isEmpty) {
-					let server = self.sipProxyUrl.starts(with: "sip:") ? self.sipProxyUrl : String("sip:" + self.sipProxyUrl)
+				if (!sipProxyUrl.isEmpty) {
+					let server = sipProxyUrl.starts(with: "sip:") ? sipProxyUrl : String("sip:" + sipProxyUrl)
 					serverAddress = try Factory.Instance.createAddress(addr: server)
 				} else {
-					serverAddress = try Factory.Instance.createAddress(addr: String("sip:" + self.domain))
+					serverAddress = try Factory.Instance.createAddress(addr: String("sip:" + domain))
 				}
 				
 				// We use the Address object to easily set the transport protocol
@@ -115,8 +150,8 @@ class AccountLoginViewModel: ObservableObject {
 				try accountParams.setServeraddress(newValue: serverAddress)
 				
 				var routeAddress: Address
-				if (!self.outboundProxy.isEmpty) {
-					let server = self.outboundProxy.starts(with: "sip:") ? self.outboundProxy : String("sip:" + self.outboundProxy)
+				if (!outboundProxy.isEmpty) {
+					let server = outboundProxy.starts(with: "sip:") ? outboundProxy : String("sip:" + outboundProxy)
 					routeAddress = try Factory.Instance.createAddress(addr: server)
 					try routeAddress.setTransport(newValue: transport)
 					try accountParams.setRoutesaddresses(newValue: [routeAddress])
@@ -158,12 +193,34 @@ class AccountLoginViewModel: ObservableObject {
 							 "\( String(describing: changedAccount.params?.identityAddress?.asString())) = \(message), no longer watching it\n")
 					
 					if state == .Failed {  // If registration failed, remove account from core
+						let reason = changedAccount.error
 						if let authInfo = changedAccount.findAuthInfo() {
 							core.removeAuthInfo(info: authInfo)
 						}
 						
-						Log.warn("Registration failed for account \(changedAccount.displayName()), deleting it from core")
+						Log.warn("Registration failed for account \(changedAccount.displayName()) (\(reason)), deleting it from core")
 						core.removeAccountWithData(account: changedAccount)
+						
+						// BizVoIP: the PBX answers 403 to a wrong password, 404 to an unknown extension or domain.
+						let wrongDetails = reason == .Forbidden || reason == .Unauthorized || reason == .NotFound
+						DispatchQueue.main.async {
+							self.isLoggingIn = false
+							if wrongDetails {
+								self.loginError = String(localized: "assistant_login_error_credentials")
+							} else {
+								self.loginError = String(localized: "assistant_login_error_unreachable")
+							}
+						}
+					} else {
+						// BizVoIP: the form starts afresh for the next account only once this one is in.
+						DispatchQueue.main.async {
+							self.isLoggingIn = false
+							SharedMainViewModel.shared.manualSignInPending = false
+							self.domain = AppServices.corePreferences.assistantDefaultDomain
+							self.transportType = "TLS"
+							self.authId = ""
+							self.outboundProxy = AppServices.corePreferences.assistantDefaultProxy
+						}
 					}
 				})
 				self.mCoreDelegate = watcher
@@ -178,14 +235,14 @@ class AccountLoginViewModel: ObservableObject {
 				// Also set the newly added account as default
 				core.defaultAccount = account
 				
+			} catch {
+				// BizVoIP: e.g. an address that does not parse; this used to end the attempt without a word.
+				Log.error("[AccountLoginViewModel] login failed: \(error.localizedDescription)")
 				DispatchQueue.main.async {
-					self.domain = AppServices.corePreferences.assistantDefaultDomain
-					self.transportType = "TLS"
-					self.authId = ""
-					self.outboundProxy = AppServices.corePreferences.assistantDefaultProxy
+					self.isLoggingIn = false
+					self.loginError = String(localized: "assistant_login_error_credentials")
 				}
-				
-			} catch { NSLog(error.localizedDescription) }
+			}
 		}
 	}
 	

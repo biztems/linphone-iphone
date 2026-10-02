@@ -80,3 +80,8 @@
 "assistant_recover_email_account_label" = "E-mail";
 "assistant_recover_phone_number_account_label" = "Numer telefonu";
 "assistant_recover_phone_number_account_unavailable_no_push_warning" = "Powiadomienia push nie wydają się być dostępne na Twoim urządzeniu, ale są one obowiązkowe do odzyskania konta numeru telefonu w aplikacji mobilnej.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Wpisz nazwę użytkownika, hasło i domenę.";
+"assistant_login_error_credentials" = "Logowanie nie powiodło się: sprawdź nazwę użytkownika, hasło i domenę.";
+"assistant_login_error_unreachable" = "Nie można połączyć się z serwerem. Sprawdź połączenie z internetem i spróbuj ponownie.";

@@ -8,3 +8,8 @@
 ": %@" = ": %@";
 "assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "notification_earpiece_enforcement_message" = "Use apenas o auricular. As outras saídas de áudio estão desativadas.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Introduza o nome de utilizador, a palavra-passe e o domínio.";
+"assistant_login_error_credentials" = "Não foi possível iniciar sessão: verifique o nome de utilizador, a palavra-passe e o domínio.";
+"assistant_login_error_unreachable" = "Não foi possível contactar o servidor. Verifique a ligação à Internet e tente novamente.";

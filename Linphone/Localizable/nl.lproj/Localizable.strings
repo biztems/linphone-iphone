@@ -479,3 +479,8 @@
 "assistant_recover_email_account_label" = "Een e-mail";
 "assistant_recover_phone_number_account_label" = "Een telefoonnummer";
 "assistant_recover_phone_number_account_unavailable_no_push_warning" = "Pushmeldingen lijken niet beschikbaar te zijn op uw apparaat, maar ze zijn verplicht om een telefoonnummeraccount in de mobiele app te herstellen.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Voer de gebruikersnaam, het wachtwoord en het domein in.";
+"assistant_login_error_credentials" = "Inloggen mislukt: controleer de gebruikersnaam, het wachtwoord en het domein.";
+"assistant_login_error_unreachable" = "De server is niet bereikbaar. Controleer je internetverbinding en probeer het opnieuw.";

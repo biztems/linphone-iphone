@@ -93,3 +93,8 @@
 "conversation_info_delete_chatroom_confirm" = "Törlés";
 "dialog_remove" = "Eltávolít";
 "assistant_forgotten_password_title" = "Elfelejtett jelszó";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Adja meg a felhasználónevet, a jelszót és a tartományt.";
+"assistant_login_error_credentials" = "A bejelentkezés sikertelen: ellenőrizze a felhasználónevet, a jelszót és a tartományt.";
+"assistant_login_error_unreachable" = "A kiszolgáló nem érhető el. Ellenőrizze az internetkapcsolatot, és próbálja újra.";

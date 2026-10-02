@@ -185,3 +185,8 @@
 "assistant_recover_email_account_label" = "Un correo electrónico";
 "assistant_recover_phone_number_account_label" = "Un numero de teléfono";
 "assistant_recover_phone_number_account_unavailable_no_push_warning" = "Las notificaciones push no parecen estar disponibles en su dispositivo, pero son obligatorias para recuperar una cuenta de número de teléfono en la aplicación móvil.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Introduce el nombre de usuario, la contraseña y el dominio.";
+"assistant_login_error_credentials" = "No se ha podido iniciar sesión: comprueba el nombre de usuario, la contraseña y el dominio.";
+"assistant_login_error_unreachable" = "No se puede conectar con el servidor. Comprueba tu conexión a Internet y vuelve a intentarlo.";

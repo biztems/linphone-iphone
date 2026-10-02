@@ -452,3 +452,8 @@
 "assistant_recover_email_account_label" = "E-mailu";
 "assistant_recover_phone_number_account_label" = "Telefónneho čísla";
 "assistant_recover_phone_number_account_unavailable_no_push_warning" = "Push notifikácie sú na Vašom zariadení nedostupné, avšak sú nevyhnutné pre obnovu účtu s telefónnym číslom v mobilnej aplikácii.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Zadajte používateľské meno, heslo a doménu.";
+"assistant_login_error_credentials" = "Prihlásenie zlyhalo: skontrolujte používateľské meno, heslo a doménu.";
+"assistant_login_error_unreachable" = "Server nie je dostupný. Skontrolujte pripojenie na internet a skúste to znova.";

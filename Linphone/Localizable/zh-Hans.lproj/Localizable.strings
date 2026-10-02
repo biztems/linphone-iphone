@@ -460,3 +460,8 @@
 "assistant_recover_email_account_label" = "电子邮箱";
 "assistant_recover_phone_number_account_label" = "电话号码";
 "assistant_recover_phone_number_account_unavailable_no_push_warning" = "推送通知似乎在您的设备上不可用，但它们是在移动应用程序中恢复电话号码账户所必需的。";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "请输入用户名、密码和域名。";
+"assistant_login_error_credentials" = "登录失败：请检查用户名、密码和域名。";
+"assistant_login_error_unreachable" = "无法连接服务器。请检查网络连接后重试。";

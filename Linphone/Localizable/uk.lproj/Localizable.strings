@@ -595,3 +595,8 @@
 "assistant_recover_email_account_label" = "Електронна пошта";
 "assistant_recover_phone_number_account_label" = "Номер телефону";
 "assistant_recover_phone_number_account_unavailable_no_push_warning" = "Схоже, push-сповіщення недоступні на вашому пристрої, але вони обов’язкові для відновлення облікового запису номера телефону в мобільному застосунку.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Введіть ім’я користувача, пароль і домен.";
+"assistant_login_error_credentials" = "Не вдалося увійти: перевірте ім’я користувача, пароль і домен.";
+"assistant_login_error_unreachable" = "Сервер недоступний. Перевірте підключення до інтернету й повторіть спробу.";

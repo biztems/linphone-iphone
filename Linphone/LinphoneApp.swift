@@ -354,6 +354,7 @@ struct RootView: View {
 		(coreContext.codeScannerIsOpen && coreContext.accounts.isEmpty)
 		|| (coreContext.coreIsStarted && coreContext.accounts.isEmpty)
 		|| sharedMainViewModel.displayProfileMode
+		|| sharedMainViewModel.manualSignInPending
 	}
 }
 

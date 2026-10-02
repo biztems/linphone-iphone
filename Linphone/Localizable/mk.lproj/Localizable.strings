@@ -1,3 +1,8 @@
 
 "assistant_sip_only_login_message" = "Scan the QR code Biztems sent you, or enter your account details.";
 "notification_earpiece_enforcement_message" = "Ве молиме користете само слушалка. Другите аудио излези се оневозможени.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Внесете корисничко име, лозинка и домен.";
+"assistant_login_error_credentials" = "Најавувањето не успеа: проверете го корисничкото име, лозинката и доменот.";
+"assistant_login_error_unreachable" = "Серверот не е достапен. Проверете ја интернет-врската и обидете се повторно.";

@@ -63,6 +63,15 @@ struct ThirdPartySipAccountLoginFragment: View {
 								}
 							}
 						}
+						// BizVoIP: with Domain at the top, Login shows above the keyboard instead of through it. Later than
+						// the others: coming from Password with Next, the keyboard reloads for Go and undoes an early scroll.
+						.onChange(of: isDomainFocused) { field in
+							if field {
+								DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+									proxy.scrollTo(0, anchor: .top)
+								}
+							}
+						}
 					} else {
 						ScrollView(.vertical) {
 							innerScrollView(geometry: geometry)
@@ -78,6 +87,15 @@ struct ThirdPartySipAccountLoginFragment: View {
 							if field {
 								DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
 									proxy.scrollTo(2, anchor: .top)
+								}
+							}
+						}
+						// BizVoIP: with Domain at the top, Login shows above the keyboard instead of through it. Later than
+						// the others: coming from Password with Next, the keyboard reloads for Go and undoes an early scroll.
+						.onChange(of: isDomainFocused) { field in
+							if field {
+								DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+									proxy.scrollTo(0, anchor: .top)
 								}
 							}
 						}
@@ -102,6 +120,12 @@ struct ThirdPartySipAccountLoginFragment: View {
 							self.isShowOutboundProxyPopup.toggle()
 						}
 					}
+					
+					if accountLoginViewModel.isLoggingIn {
+						PopupLoadingView()
+							.background(.black.opacity(0.65))
+							.zIndex(4)
+					}
 				}
 			}
 		}
@@ -109,6 +133,9 @@ struct ThirdPartySipAccountLoginFragment: View {
 		.navigationBarHidden(true)
 		.edgesIgnoringSafeArea(.bottom)
 		.edgesIgnoringSafeArea(.horizontal)
+		.onDisappear {
+			SharedMainViewModel.shared.manualSignInPending = false
+		}
 	}
 	
 	func innerScrollView(geometry: GeometryProxy) -> some View {
@@ -125,6 +152,8 @@ struct ThirdPartySipAccountLoginFragment: View {
 							withAnimation {
 								accountLoginViewModel.domain = AppServices.corePreferences.assistantDefaultDomain
 								accountLoginViewModel.transportType = "TLS"
+								accountLoginViewModel.loginError = nil
+								SharedMainViewModel.shared.manualSignInPending = false
 								dismiss()
 							}
 						}
@@ -158,6 +187,8 @@ struct ThirdPartySipAccountLoginFragment: View {
 					)
 					.padding(.bottom)
 					.focused($isNameFocused)
+					.submitLabel(.next)
+					.onSubmit { isPasswordFocused = true }
 				
 				Text(String(localized: "password")+"*")
 					.default_text_style_700(styleSize: 15)
@@ -170,6 +201,8 @@ struct ThirdPartySipAccountLoginFragment: View {
 								.default_text_style(styleSize: 15)
 								.frame(height: 25)
 								.focused($isPasswordFocused)
+								.submitLabel(.next)
+								.onSubmit { isDomainFocused = true }
 						} else {
 							TextField("password", text: $accountLoginViewModel.passwd)
 								.default_text_style(styleSize: 15)
@@ -177,6 +210,8 @@ struct ThirdPartySipAccountLoginFragment: View {
 								.autocapitalization(.none)
 								.frame(height: 25)
 								.focused($isPasswordFocused)
+								.submitLabel(.next)
+								.onSubmit { isDomainFocused = true }
 						}
 					}
 					Button(action: {
@@ -204,6 +239,7 @@ struct ThirdPartySipAccountLoginFragment: View {
 					.padding(.bottom, -5)
 				
 				TextField("azienda.voip.biztems.it", text: $accountLoginViewModel.domain)
+					.id(0)
 					.default_text_style(styleSize: 15)
 					.disableAutocorrection(true)
 					.autocapitalization(.none)
@@ -218,6 +254,8 @@ struct ThirdPartySipAccountLoginFragment: View {
 					)
 					.padding(.bottom)
 					.focused($isDomainFocused)
+					.submitLabel(.go)
+					.onSubmit { signIn() }
 				
 				Text(String(localized: "sip_address_display_name"))
 					.default_text_style_700(styleSize: 15)
@@ -379,8 +417,20 @@ struct ThirdPartySipAccountLoginFragment: View {
 			
 			Spacer()
 			
+			if let loginError = accountLoginViewModel.loginError {
+				Text(loginError)
+					.foregroundStyle(Color.redDanger500)
+					.default_text_style_600(styleSize: 15)
+					.multilineTextAlignment(.center)
+					.frame(maxWidth: SharedMainViewModel.shared.maxWidth)
+					.padding(.horizontal, 20)
+					.padding(.bottom, 10)
+			}
+			
+			// BizVoIP: Login always answers a tap, with the sign-in or with what is missing; a disabled
+			// Login gave App Review nothing to go on.
 			Button(action: {
-				self.accountLoginViewModel.login()
+				signIn()
 			}, label: {
 				Text("assistant_account_login")
 					.default_text_style_white_600(styleSize: 20)
@@ -390,11 +440,11 @@ struct ThirdPartySipAccountLoginFragment: View {
 			.padding(.horizontal, 20)
 			.padding(.vertical, 10)
 			.background(
-				(accountLoginViewModel.username.isEmpty || accountLoginViewModel.passwd.isEmpty || accountLoginViewModel.domain.isEmpty)
+				(accountLoginViewModel.username.isEmpty || accountLoginViewModel.passwd.isEmpty
+				 || (accountLoginViewModel.domain.isEmpty && !accountLoginViewModel.username.contains("@")))
 				? Color.orangeMain100
 				: Color.orangeMain500)
 			.cornerRadius(60)
-			.disabled(accountLoginViewModel.username.isEmpty || accountLoginViewModel.passwd.isEmpty || accountLoginViewModel.domain.isEmpty)
 			.frame(maxWidth: SharedMainViewModel.shared.maxWidth)
 			.padding(.horizontal)
 			.padding(.bottom)
@@ -407,6 +457,17 @@ struct ThirdPartySipAccountLoginFragment: View {
 		}
 		.frame(minHeight: geometry.size.height)
 		.padding(.bottom, keyboard.currentHeight)
+	}
+	
+	func signIn() {
+		isNameFocused = false
+		isPasswordFocused = false
+		isDomainFocused = false
+		isDisplayNameFocused = false
+		isAuthIdFocused = false
+		isSipProxyUrlFocused = false
+		isOutboundProxyFocused = false
+		accountLoginViewModel.login()
 	}
 }
 

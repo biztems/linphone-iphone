@@ -490,3 +490,8 @@
 "assistant_recover_email_account_label" = "Электронная почта";
 "assistant_recover_phone_number_account_label" = "Номер телефона";
 "assistant_recover_phone_number_account_unavailable_no_push_warning" = "Похоже, что push-уведомления недоступны на вашем устройстве, но они необходимы для восстановления номера телефона аккаунта в мобильном приложении.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Введите имя пользователя, пароль и домен.";
+"assistant_login_error_credentials" = "Не удалось войти: проверьте имя пользователя, пароль и домен.";
+"assistant_login_error_unreachable" = "Сервер недоступен. Проверьте подключение к интернету и повторите попытку.";

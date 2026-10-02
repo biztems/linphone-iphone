@@ -648,3 +648,8 @@
 "early_push_unknown_caller" = "Unknown";
 "early_push_missed_call_title" = "Missed call";
 "early_push_missed_call_body" = "You received a call while your device was locked.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Enter the username, password and domain.";
+"assistant_login_error_credentials" = "Sign-in failed: check the username, password and domain.";
+"assistant_login_error_unreachable" = "Could not reach the server. Check your internet connection and try again.";
