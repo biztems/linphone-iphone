@@ -34,6 +34,10 @@ class SharedMainViewModel: ObservableObject {
 	@Published var welcomeViewDisplayed = false
 	@Published var generalTermsAccepted = false
 	@Published var displayProfileMode = false
+	// BizVoIP: keeps the sign-in screens up while a first account typed in by hand registers. The app shows
+	// its main screens as soon as an account exists, and a failed account is deleted, so the form used to
+	// vanish and come back empty, which is all a failed sign-in looked like.
+	@Published var manualSignInPending = false
 	@Published var defaultAvatar: URL?
 	@Published var indexView: Int = 0
 	@Published var increaseTrustLevelPopupAccepted = false

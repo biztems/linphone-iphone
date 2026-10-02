@@ -643,3 +643,8 @@
 "early_push_unknown_caller" = "Inconnu";
 "early_push_missed_call_title" = "Appel manqué";
 "early_push_missed_call_body" = "Vous avez reçu un appel alors que votre appareil était verrouillé.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Saisissez le nom d’utilisateur, le mot de passe et le domaine.";
+"assistant_login_error_credentials" = "Échec de la connexion : vérifiez le nom d’utilisateur, le mot de passe et le domaine.";
+"assistant_login_error_unreachable" = "Impossible de joindre le serveur. Vérifiez votre connexion Internet et réessayez.";

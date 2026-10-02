@@ -16,3 +16,8 @@
 "start" = "Hasi";
 "username" = "Erabiltzaile izena";
 "notification_earpiece_enforcement_message" = "Mesedez, erabili entzungailua soilik. Beste audio-irteerak desgaituta daude.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Idatzi erabiltzaile-izena, pasahitza eta domeinua.";
+"assistant_login_error_credentials" = "Ezin izan da saioa hasi: egiaztatu erabiltzaile-izena, pasahitza eta domeinua.";
+"assistant_login_error_unreachable" = "Ezin da zerbitzariarekin konektatu. Egiaztatu Interneteko konexioa eta saiatu berriro.";

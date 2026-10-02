@@ -31,3 +31,8 @@
 "notification_earpiece_enforcement_message" = "Käytä vain kuuloketta. Muut äänilähdöt on poistettu käytöstä.";
 "ZRTP" = "ZRTP";
 "[https://sip.linphone.org](https://sip.linphone.org)" = "[https://sip.linphone.org](https://sip.linphone.org)";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Anna käyttäjätunnus, salasana ja verkkotunnus.";
+"assistant_login_error_credentials" = "Kirjautuminen epäonnistui: tarkista käyttäjätunnus, salasana ja verkkotunnus.";
+"assistant_login_error_unreachable" = "Palvelimeen ei saada yhteyttä. Tarkista internetyhteys ja yritä uudelleen.";

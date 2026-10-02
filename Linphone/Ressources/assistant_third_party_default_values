@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- BizVoIP: SRTP is required, as for the QR accounts: the PBX refuses an optional SRTP offer, which goes out
+     as plain RTP/AVP, so accounts typed in by hand could sign in but not call ("Couldn't negotiate stream"). -->
 <config xmlns="http://www.linphone.org/xsds/lpconfig.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.linphone.org/xsds/lpconfig.xsd lpconfig.xsd">
   <section name="proxy_default_values">
 	<entry name="avpf" overwrite="true">0</entry>
@@ -30,7 +32,7 @@
 	<entry name="protocols" overwrite="true"></entry>
   </section>
   <section name="sip">
-	<entry name="media_encryption">srtp</entry>
-	<entry name="media_encryption_mandatory" overwrite="true">0</entry>
+	<entry name="media_encryption" overwrite="true">srtp</entry>
+	<entry name="media_encryption_mandatory" overwrite="true">1</entry>
   </section>
 </config>

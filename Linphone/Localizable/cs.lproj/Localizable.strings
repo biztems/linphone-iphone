@@ -638,3 +638,8 @@
 "assistant_recover_phone_number_account_unavailable_no_push_warning" = "Push notifikace se na vašem zařízení nezdají být dostupné, ale jsou nezbytné pro obnovení účtu s telefonním číslem v mobilní aplikaci.";
 "assistant_forgotten_password_title" = "Zapomenuté heslo";
 "assistant_forgotten_password_subtitle" = "Zvolte způsob obnovy svého účtu.";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Zadejte uživatelské jméno, heslo a doménu.";
+"assistant_login_error_credentials" = "Přihlášení se nezdařilo: zkontrolujte uživatelské jméno, heslo a doménu.";
+"assistant_login_error_unreachable" = "Server není dostupný. Zkontrolujte připojení k internetu a zkuste to znovu.";

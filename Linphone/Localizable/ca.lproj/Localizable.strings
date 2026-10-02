@@ -10,3 +10,8 @@
 "conversation_participants_list_empty" = "No s'ha trobat cap participant";
 "conversation_participants_list_header" = "Participants";
 "meeting_schedule_add_participants_title" = "Afegeix participants";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Introdueix el nom d’usuari, la contrasenya i el domini.";
+"assistant_login_error_credentials" = "No s’ha pogut iniciar la sessió: comprova el nom d’usuari, la contrasenya i el domini.";
+"assistant_login_error_unreachable" = "No es pot contactar amb el servidor. Comprova la connexió a Internet i torna-ho a provar.";

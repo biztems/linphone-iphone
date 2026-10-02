@@ -638,3 +638,8 @@
 "website_open_source_licences_usage_url" = "https://wiki.linphone.org/xwiki/wiki/public/view/Linphone/Third%20party%20components%20/";
 "website_privacy_policy_url" = "https://www.biztems.it/privacy-cookie-policy";
 "website_terms_and_conditions_url" = "https://www.linphone.org/en/terms-of-use";
+
+/* BizVoIP: the manual sign-in form */
+"assistant_login_error_missing_fields" = "Inserisci nome utente, password e dominio.";
+"assistant_login_error_credentials" = "Accesso non riuscito: controlla nome utente, password e dominio.";
+"assistant_login_error_unreachable" = "Impossibile raggiungere il server. Controlla la connessione a Internet e riprova.";
