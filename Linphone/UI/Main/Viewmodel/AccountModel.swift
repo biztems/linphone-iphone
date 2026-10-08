@@ -301,11 +301,57 @@ class AccountModel: ObservableObject {
 	
 	func logout() {
 		CoreContext.shared.doOnCoreQueue { core in
-			Log.info("Account \(self.account.displayName()) has been removed")
-			core.removeAccountWithData(account: self.account)
-			
-			if let authInfo = self.account.findAuthInfo() {
+			AccountModel.unregisterThenRemove(core: core, account: self.account)
+		}
+	}
+	
+	// BizVoIP: unregister first, while the account still has its password, and remove it once the server has
+	// answered. Removing it at once took the password with it: the server's challenge to the un-REGISTER went
+	// unanswered, and the registration (with its pushes) stayed for 7 days. As on Android. Core queue only.
+	static func unregisterThenRemove(core: Core, account: Account) {
+		let remove = {
+			Log.info("Account \(account.displayName()) has been removed")
+			let authInfo = account.findAuthInfo()
+			core.removeAccountWithData(account: account)
+			if let authInfo = authInfo {
 				core.removeAuthInfo(info: authInfo)
+			}
+			if core.defaultAccount == nil, let first = core.accountList.first {
+				core.defaultAccount = first
+			}
+		}
+		let state = account.state
+		guard state == .Ok || state == .Progress || state == .Refreshing, let params = account.params?.clone() else {
+			remove()
+			return
+		}
+		Log.info("Unregistering account \(account.displayName()) before removing it")
+		var removed = false
+		var delegate: AccountDelegate?
+		delegate = AccountDelegateStub(onRegistrationStateChanged: { (changed: Account, newState: RegistrationState, _: String) in
+			guard newState == .Cleared || newState == .Failed || newState == .None, !removed else { return }
+			Log.info("Account \(changed.displayName()) registration is now \(newState), removing it")
+			removed = true
+			if let delegate = delegate {
+				changed.removeDelegate(delegate: delegate)
+			}
+			remove()
+		})
+		if let delegate = delegate {
+			account.addDelegate(delegate: delegate)
+		}
+		params.registerEnabled = false
+		account.params = params
+		// An unregistration that gets no answer doesn't keep the account
+		DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+			CoreContext.shared.doOnCoreQueue { _ in
+				guard !removed else { return }
+				Log.warn("No answer to the un-REGISTER after 5 s, removing account \(account.displayName()) anyway")
+				removed = true
+				if let delegate = delegate {
+					account.removeDelegate(delegate: delegate)
+				}
+				remove()
 			}
 		}
 	}

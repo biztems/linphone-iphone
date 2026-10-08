@@ -40,8 +40,7 @@ class HelpView { // TODO (basic debug moved here until halp view is implemented)
 	static func logout() {
 		CoreContext.shared.doOnCoreQueue { core in
 			if let account = core.defaultAccount {
-				Log.info("Account \(account.displayName()) has been removed")
-				core.removeAccountWithData(account: account) // UI update and auth info removal moved into onRegistrationChanged core callback, in CoreContext
+				AccountModel.unregisterThenRemove(core: core, account: account)  // BizVoIP: unregister first, see there
 			}
 		}
 	}
