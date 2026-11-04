@@ -108,97 +108,97 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "BizVoIP shows your contacts so you can call them."
+            "value": "BizVoIP shows your contacts so you can call them, and saves the ones you add to your address book."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP mostra i tuoi contatti per consentirti di chiamarli."
+            "value": "BizVoIP mostra i tuoi contatti per consentirti di chiamarli e salva nella rubrica quelli che aggiungi."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP affiche vos contacts pour que vous puissiez les appeler."
+            "value": "BizVoIP affiche vos contacts pour que vous puissiez les appeler, et enregistre dans votre carnet d'adresses ceux que vous ajoutez."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP zeigt Ihre Kontakte an, damit Sie sie anrufen können."
+            "value": "BizVoIP zeigt Ihre Kontakte an, damit Sie sie anrufen können, und speichert die Kontakte, die Sie hinzufügen, in Ihrem Adressbuch."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP muestra tus contactos para que puedas llamarlos."
+            "value": "BizVoIP muestra tus contactos para que puedas llamarlos y guarda en tu agenda los que añadas."
           }
         },
         "pt": {
           "stringUnit": {
             "state": "translated",
-            "value": "O BizVoIP mostra os seus contactos para que lhes possa ligar."
+            "value": "O BizVoIP mostra os seus contactos para que lhes possa ligar e guarda na agenda os que adicionar."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O BizVoIP mostra seus contatos para que você possa ligar para eles."
+            "value": "O BizVoIP mostra seus contatos para que você possa ligar para eles e salva na agenda os que você adicionar."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP toont je contacten zodat je ze kunt bellen."
+            "value": "BizVoIP toont je contacten zodat je ze kunt bellen, en bewaart de contacten die je toevoegt in je adresboek."
           }
         },
         "ca": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP mostra els teus contactes perquè els puguis trucar."
+            "value": "BizVoIP mostra els teus contactes perquè els puguis trucar i desa a la teva agenda els que afegeixis."
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP zobrazuje vaše kontakty, abyste jim mohli zavolat."
+            "value": "BizVoIP zobrazuje vaše kontakty, abyste jim mohli volat, a ukládá do adresáře ty, které přidáte."
           }
         },
         "sk": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP zobrazuje vaše kontakty, aby ste im mohli zavolať."
+            "value": "BizVoIP zobrazuje vaše kontakty, aby ste im mohli volať, a ukladá do adresára tie, ktoré pridáte."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP показывает ваши контакты, чтобы вы могли им позвонить."
+            "value": "BizVoIP показывает ваши контакты, чтобы вы могли им позвонить, и сохраняет добавленные вами контакты в адресной книге."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP показує ваші контакти, щоб ви могли їм зателефонувати."
+            "value": "BizVoIP показує ваші контакти, щоб ви могли їм зателефонувати, і зберігає додані вами контакти в адресній книзі."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP 显示你的联系人，方便你拨打电话。"
+            "value": "BizVoIP 会显示你的联系人以便你拨打，并将你添加的联系人保存到通讯录。"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "BizVoIP näyttää yhteystietosi, jotta voit soittaa niille."
+            "value": "BizVoIP näyttää yhteystietosi, jotta voit soittaa niille, ja tallentaa lisäämäsi yhteystiedot osoitekirjaasi."
           }
         },
         "hu": {
           "stringUnit": {
             "state": "translated",
-            "value": "A BizVoIP megjeleníti a névjegyeidet, hogy felhívhasd őket."
+            "value": "A BizVoIP megjeleníti a névjegyeidet, hogy felhívhasd őket, és a címjegyzékedbe menti az általad hozzáadottakat."
           }
         }
       }

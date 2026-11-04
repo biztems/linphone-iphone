@@ -20,6 +20,7 @@
 // swiftlint:disable type_body_length
 // swiftlint:disable line_length
 import SwiftUI
+import Contacts
 import linphonesw
 
 struct ContentView: View {
@@ -56,6 +57,9 @@ struct ContentView: View {
 	@State var isShowEditContactFragment = false
 	@State var isShowEditContactFragmentInContactDetails = false
 	@State var isShowEditContactFragmentAddress = ""
+	@State var isShowPhoneNewContact = false
+	@State var isShowInAppNewContact = false
+	@State var phoneNewContact = CNContact()
 	@State var isShowStartCallFragment = false
 	@State var isShowStartConversationFragment = false
 	@State var isShowDismissPopup = false
@@ -1275,7 +1279,9 @@ struct ContentView: View {
 						}
 					}
 					
-					if isShowEditContactFragment {
+					// the app's own editor, once chosen, stays until it closes, even if access to the phone's contacts
+					// changes meanwhile (onChange below makes the choice)
+					if isShowEditContactFragment && (isShowInAppNewContact || !NewPhoneContactView.canSaveToPhone()) {
 						VStack {
 							EditContactFragment(
 								isShowEditContactFragment: $isShowEditContactFragment,
@@ -2127,6 +2133,40 @@ struct ContentView: View {
 					conversationsListVM.computeChatRoomsList()
 				}
 			}
+		}
+		// BizVoIP: a new contact goes into the phone's address book, through iOS's own editor (NewPhoneContactView)
+		.onChange(of: isShowEditContactFragment) { show in
+			if !show {
+				isShowInAppNewContact = false
+			} else if isShowInAppNewContact {
+				return
+			} else if NewPhoneContactView.canSaveToPhone() {
+				phoneNewContact = NewPhoneContactView.prefilled(address: isShowEditContactFragmentAddress)
+				isShowEditContactFragment = false
+				isShowEditContactFragmentAddress = ""
+				if focusedField {
+					resetFilter()
+				}
+				sharedMainViewModel.displayedFriend = nil
+				// once whatever asked for it has closed (the history list's menu, say): UIKit presents nothing while a
+				// dismissal runs, and a cover asked for then would never show, nor any after it
+				isShowPhoneNewContact = false
+				DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+					isShowPhoneNewContact = true
+				}
+			} else {
+				isShowInAppNewContact = true
+			}
+		}
+		// a call answered meanwhile (from the CallKit banner, say) goes in front: the editor closes
+		.onChange(of: telecomManager.callDisplayed) { displayed in
+			if displayed {
+				isShowPhoneNewContact = false
+			}
+		}
+		.fullScreenCover(isPresented: $isShowPhoneNewContact) {
+			NewPhoneContactView(isPresented: $isShowPhoneNewContact, contact: phoneNewContact)
+				.edgesIgnoringSafeArea(.all)
 		}
 		.id(coreContext.reloadID)
 	}

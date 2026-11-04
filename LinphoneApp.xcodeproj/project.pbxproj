@@ -2263,7 +2263,7 @@
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "BizVoIP adds your meetings to your calendar.";
 				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "BizVoIP adds your meetings to your calendar.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "BizVoIP uses the camera for video calls and to scan setup QR codes.";
-				INFOPLIST_KEY_NSContactsUsageDescription = "BizVoIP shows your contacts so you can call them.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "BizVoIP shows your contacts so you can call them, and saves the ones you add to your address book.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "BizVoIP uses the local network to connect your calls.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "BizVoIP needs the microphone for your calls.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BizVoIP uses your photos to set profile pictures.";
@@ -2323,7 +2323,7 @@
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "BizVoIP adds your meetings to your calendar.";
 				INFOPLIST_KEY_NSCalendarsWriteOnlyAccessUsageDescription = "BizVoIP adds your meetings to your calendar.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "BizVoIP uses the camera for video calls and to scan setup QR codes.";
-				INFOPLIST_KEY_NSContactsUsageDescription = "BizVoIP shows your contacts so you can call them.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "BizVoIP shows your contacts so you can call them, and saves the ones you add to your address book.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "BizVoIP uses the local network to connect your calls.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "BizVoIP needs the microphone for your calls.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BizVoIP uses your photos to set profile pictures.";
