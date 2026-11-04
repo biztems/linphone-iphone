@@ -93,3 +93,69 @@ struct EditContactView: UIViewControllerRepresentable {
 	func updateUIViewController(_ uiViewController: EditContactView.UIViewControllerType, context: UIViewControllerRepresentableContext<EditContactView>) {
 	}
 }
+
+// BizVoIP: a new contact goes into the phone's address book, through iOS's own editor, so it is in the phone's
+// Contacts and survives the app; the app then shows it like any other phone contact. In a navigation controller of its
+// own, so that the editor's Cancel and Done show. Without access to the phone's contacts the app couldn't show it, so
+// it stays in the app's own address book, as before (ContentView). A number of 6 digits or more is saved as a phone
+// number; a short extension (201) as a SIP address, so that the phone's own dialer doesn't call it over the mobile
+// network.
+struct NewPhoneContactView: UIViewControllerRepresentable {
+
+	static func canSaveToPhone() -> Bool {
+		let status = CNContactStore.authorizationStatus(for: .contacts)
+		if status == .authorized {
+			return true
+		}
+		if #available(iOS 18.0, *) {
+			return status == .limited
+		}
+		return false
+	}
+
+	static func prefilled(address: String) -> CNContact {
+		let contact = CNMutableContact()
+		let address = address.hasPrefix("sip:") ? String(address.dropFirst(4)) : address
+		let user = String(address.split(separator: "@").first?.split(separator: ";").first ?? "")
+		if user.range(of: "^\\+?[0-9]{6,}$", options: .regularExpression) != nil {
+			contact.phoneNumbers = [CNLabeledValue(label: nil, value: CNPhoneNumber(stringValue: user))]
+		} else if !address.isEmpty {
+			contact.instantMessageAddresses = [
+				CNLabeledValue(label: "SIP", value: CNInstantMessageAddress(username: address, service: "SIP"))
+			]
+		}
+		return contact
+	}
+
+	class Coordinator: NSObject, CNContactViewControllerDelegate {
+		var parent: NewPhoneContactView
+
+		init(_ parent: NewPhoneContactView) {
+			self.parent = parent
+		}
+
+		func contactViewController(_ viewController: CNContactViewController, didCompleteWith contact: CNContact?) {
+			if contact != nil {
+				ContactsManager.shared.fetchContacts()   // the phone's contacts again, the new one with them
+			}
+			parent.isPresented = false
+		}
+	}
+
+	@Binding var isPresented: Bool
+	let contact: CNContact
+
+	func makeCoordinator() -> Coordinator {
+		return Coordinator(self)
+	}
+
+	func makeUIViewController(context: Context) -> UINavigationController {
+		let editor = CNContactViewController(forNewContact: contact)
+		editor.contactStore = CNContactStore()
+		editor.delegate = context.coordinator
+		return UINavigationController(rootViewController: editor)
+	}
+
+	func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
+	}
+}
